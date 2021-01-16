@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     let kIsFirstLaunch = "appFirstLaunch"
     let kLaunchCount = "appLaunchNumber"
     let kHasReivewed = "appUserReviewPrompt"
-    let kAdUnitId = "ca-app-pub-"
+    let kAdUnitId = "ca-app-pub-1234"
     let kHalfConfetti = "half92Done"
     
     // MARK: Core Data Functions
