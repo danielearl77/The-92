@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     let kIsFirstLaunch = "appFirstLaunch"
     let kLaunchCount = "appLaunchNumber"
     let kHasReivewed = "appUserReviewPrompt"
-    let kAdUnitId = "ca-app-pub-1234"
+    let kAdUnitId = "ca-app-pub-1798485712270431/4203983051"
     let kHalfConfetti = "half92Done"
     
     // MARK: Core Data Functions
@@ -359,7 +359,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         bannerView.adUnitID = kAdUnitId
         bannerView.rootViewController = self
-        //loadBannerAd()
+        loadBannerAd()
+        
         let visits = getPrimaryVisitCount()
         let oldVisits = getOldVisitCount()
         let userDefaults: UserDefaults = UserDefaults.standard
@@ -400,10 +401,6 @@ class ViewController: UIViewController {
         
         let userDefaults: UserDefaults = UserDefaults.standard
         let halfCount = userDefaults.bool(forKey: kHalfConfetti)
-        
-        bannerView.adUnitID = kAdUnitId
-        bannerView.rootViewController = self
-        //loadBannerAd()
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
