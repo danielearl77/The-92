@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Accrington.png",
+      "filename" : "Accrington Stanley.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Accrington@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Accrington@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

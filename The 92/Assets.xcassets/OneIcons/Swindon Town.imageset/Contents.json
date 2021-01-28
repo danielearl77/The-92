@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Swindon.png",
+      "filename" : "Swindon Town.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Swindon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Swindon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

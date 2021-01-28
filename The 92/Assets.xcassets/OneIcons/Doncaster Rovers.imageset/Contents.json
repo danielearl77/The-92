@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Doncaster.png",
+      "filename" : "Doncaster Rovers.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Doncaster@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Doncaster@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

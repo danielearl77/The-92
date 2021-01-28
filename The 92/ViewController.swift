@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import SpriteKit
+import StoreKit
 import GoogleMobileAds
 
 class ViewController: UIViewController {
@@ -20,14 +21,14 @@ class ViewController: UIViewController {
      * NEW LIVE VERSION NUMBER FOR THE NEW SEASON
      * Default value is -1 to not trigger new season updates
      */
-        let newSeasonVersionNumber = "-1"
+        let newSeasonVersionNumber = "1.1"
     /*
      * Enter new values here AND update Team, Stadium, and Stadium Map Arrays as needed
      * comment out any not needed for this update
      */
         let promotedTeams = ["Team Name","Team Name"]
         let relegatedTeams = ["Team Name","Team Name"]
-        let changedGroundName = ["Team Name":"Stadium Name"]
+        let changedGroundName = ["Lincoln City":"LNER Stadium"]
         let movedGrounds = ["Team Name":"Stadium Name"]
     /*
      * END OF NEW SEASON VERSION NUMBER
@@ -334,6 +335,30 @@ class ViewController: UIViewController {
         }
     }
     
+    func userReview() -> Bool {
+        let userDefaults: UserDefaults = UserDefaults.standard
+        let userHadReviewed = userDefaults.bool(forKey: kHasReivewed)
+        var launchCount = userDefaults.integer(forKey: kLaunchCount)
+        
+        if userHadReviewed {
+            return false
+        } else {
+            if launchCount < 10 {
+                launchCount += 1
+                userDefaults.set(launchCount, forKey: kLaunchCount)
+                return false
+            } else {
+                if all92Visits.count < 5 {
+                    return false
+                } else {
+                    SKStoreReviewController.requestReview()
+                    userDefaults.set(true, forKey: kHasReivewed)
+                    return true
+                }
+            }
+        }
+    }
+    
     func runNewSeasonUpdates() {
         // COMMENT OUT IF NOT NEEDED FOR THIS SEASON UPDATE
         /*
@@ -344,11 +369,11 @@ class ViewController: UIViewController {
         for r in relegatedTeams {
             _ = updateRelegation(team: r)
         }
-      
+        */
         for n in changedGroundName {
             _ = updateGroundName(team: n.key, ground: n.value)
         }
-        
+        /*
         for m in movedGrounds {
             _ = updateNewGround(team: m.key)
         }
@@ -392,6 +417,9 @@ class ViewController: UIViewController {
             }
         } else {
             WhereIsHome.text = ""
+        }
+        if userReview() {
+            NSLog("UserReview Dialog Shown")
         }
     }
     

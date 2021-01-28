@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Colchester.png",
+      "filename" : "Colchester Utd.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Colchester@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Colchester@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

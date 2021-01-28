@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Forest Green.png",
+      "filename" : "Forest Green Rovers.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Forest Green@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Forest Green@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

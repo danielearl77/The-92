@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Mansfield.png",
+      "filename" : "Mansfield Town.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Mansfield@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Mansfield@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Wycombe.png",
+      "filename" : "Wycombe Wanderers.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Wycombe@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Wycombe@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

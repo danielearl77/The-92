@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Leyton Orient.png",
+      "filename" : "Orient.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Leyton Orient@2x.png",
+      "filename" : "Orient@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Leyton Orient@3x.png",
+      "filename" : "Orient@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

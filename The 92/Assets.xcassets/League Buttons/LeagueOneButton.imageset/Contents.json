@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "EFL1-Btn.png",
+      "filename" : "LOneButton.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "EFL1-Btn@2x.png",
+      "filename" : "LOneButton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "EFL1-Btn@3x.png",
+      "filename" : "LOneButton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

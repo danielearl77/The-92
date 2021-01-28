@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Salford City.png",
+      "filename" : "Salford.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Salford City@2x.png",
+      "filename" : "Salford@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Salford City@3x.png",
+      "filename" : "Salford@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

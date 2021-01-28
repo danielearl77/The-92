@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQg-He-Jhl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQg-He-Jhl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,24 +62,24 @@
                                 <rect key="frame" x="0.0" y="763" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Zab-VR-qrx"/>
+                                    <constraint firstAttribute="height" constant="50" id="LDL-WN-cNH"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YVx-rV-kh6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1SN-ma-WzS"/>
                             <constraint firstItem="Ylp-33-fH1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3db-CR-g64"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ApM-UN-KmT" secondAttribute="trailing" constant="20" id="A3o-4g-tHp"/>
                             <constraint firstItem="ApM-UN-KmT" firstAttribute="top" secondItem="Ylp-33-fH1" secondAttribute="bottom" constant="10" id="FMx-ku-6cm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ylp-33-fH1" secondAttribute="trailing" constant="20" id="JoH-Xi-wql"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YVx-rV-kh6" secondAttribute="trailing" id="R9T-as-8cb"/>
                             <constraint firstItem="lDW-hs-BrA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T8W-je-mUY"/>
+                            <constraint firstItem="YVx-rV-kh6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aoz-a9-13S"/>
                             <constraint firstItem="lDW-hs-BrA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="maS-qL-vgm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YVx-rV-kh6" secondAttribute="trailing" id="puz-KS-RCH"/>
                             <constraint firstItem="Ylp-33-fH1" firstAttribute="top" secondItem="lDW-hs-BrA" secondAttribute="bottom" constant="10" id="tSs-yx-16n"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="YVx-rV-kh6" secondAttribute="bottom" id="tcL-1w-u8R"/>
                             <constraint firstItem="ApM-UN-KmT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uI1-Te-i3d"/>
-                            <constraint firstItem="YVx-rV-kh6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ufy-Xd-P6M"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="TabHome" id="qd3-dp-Blu"/>
@@ -114,8 +114,8 @@
                                     <constraint firstAttribute="width" constant="230" id="N3H-ut-tK0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="CHAMPIONSHIP" backgroundImage="Buttons">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                <state key="normal" title="CHAMPIONSHIP" backgroundImage="ChampButton">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Exy-LX-7Ke" kind="show" identifier="Championship" id="l5l-Ez-p3f"/>
@@ -129,8 +129,8 @@
                                     <constraint firstAttribute="height" constant="40" id="jKU-lw-XsU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="LEAGUE ONE" backgroundImage="Buttons">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                <state key="normal" title="LEAGUE ONE" backgroundImage="LeagueOneButton">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Exy-LX-7Ke" kind="show" identifier="LeagueOne" id="0DQ-1z-ayz"/>
@@ -144,8 +144,8 @@
                                     <constraint firstAttribute="width" constant="230" id="iPe-Nl-Sg5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="LEAGUE TWO" backgroundImage="Buttons">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                <state key="normal" title="LEAGUE TWO" backgroundImage="LeagueTwoButton">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Exy-LX-7Ke" kind="show" identifier="LeagueTwo" id="eWc-3g-h9U"/>
@@ -159,8 +159,8 @@
                                     <constraint firstAttribute="height" constant="40" id="y1c-Cp-aV2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="OLD GROUNDS" backgroundImage="Buttons">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                <state key="normal" title="OLD GROUNDS" backgroundImage="OldGroundsButton">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Exy-LX-7Ke" kind="show" identifier="OldGrounds" id="5dc-fm-MIN"/>
@@ -174,8 +174,8 @@
                                     <constraint firstAttribute="height" constant="40" id="U67-aP-bWV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="PREMIER" backgroundImage="Buttons">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                <state key="normal" title="PREMIER" backgroundImage="PremButton">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Exy-LX-7Ke" kind="show" identifier="PremierLeague" id="BkV-7J-rOF"/>
@@ -746,8 +746,13 @@ Remove Photos will remove all the photos from the app, but will not delete the o
     <resources>
         <image name="Background" width="2121" height="3000"/>
         <image name="Buttons" width="27.5" height="50"/>
+        <image name="ChampButton" width="230" height="40"/>
         <image name="HomePageCount" width="251" height="250"/>
+        <image name="LeagueOneButton" width="230" height="40"/>
+        <image name="LeagueTwoButton" width="230" height="40"/>
+        <image name="OldGroundsButton" width="230" height="40"/>
         <image name="PlaceHolder" width="380" height="280"/>
+        <image name="PremButton" width="230" height="40"/>
         <image name="SmallButton" width="21.5" height="40"/>
         <image name="TabGrounds" width="30" height="30"/>
         <image name="TabHome" width="30" height="30"/>
