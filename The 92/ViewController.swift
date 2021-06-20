@@ -10,7 +10,6 @@ import UIKit
 import CoreData
 import SpriteKit
 import StoreKit
-import GoogleMobileAds
 
 class ViewController: UIViewController {
     
@@ -38,8 +37,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var TotalVisitCount: UILabel!
     @IBOutlet weak var TotalOldGroundsCount: UILabel!
     @IBOutlet weak var WhereIsHome: UILabel!
-    @IBOutlet weak var bannerView: GADBannerView!
-    
+        
     // MARK: Vars
     var mainVisitText = " of 92"
     var oldVisitText = " other grounds"
@@ -56,7 +54,6 @@ class ViewController: UIViewController {
     let kIsFirstLaunch = "appFirstLaunch"
     let kLaunchCount = "appLaunchNumber"
     let kHasReivewed = "appUserReviewPrompt"
-    let kAdUnitId = "ca-app-pub"
     let kHalfConfetti = "half92Done"
     
     // MARK: Core Data Functions
@@ -382,9 +379,6 @@ class ViewController: UIViewController {
     
     // MARK: - View
     override func viewDidAppear(_ animated: Bool) {
-        bannerView.adUnitID = kAdUnitId
-        bannerView.rootViewController = self
-        loadBannerAd()
         
         let visits = getPrimaryVisitCount()
         let oldVisits = getOldVisitCount()
@@ -441,26 +435,4 @@ class ViewController: UIViewController {
             addConfetti()
         }
     }
-    
-    //MARK: - Ads
-    override func viewWillTransition(to size: CGSize,
-                              with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to:size, with:coordinator)
-        coordinator.animate(alongsideTransition: { _ in
-          self.loadBannerAd()
-        })
-      }
-
-      func loadBannerAd() {
-        let frame = { () -> CGRect in
-          if #available(iOS 11.0, *) {
-            return view.frame.inset(by: view.safeAreaInsets)
-          } else {
-            return view.frame
-          }
-        }()
-        let viewWidth = frame.size.width
-        bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
-        bannerView.load(GADRequest())
-      }
 }

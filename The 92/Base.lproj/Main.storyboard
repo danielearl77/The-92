@@ -58,13 +58,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVx-rV-kh6" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LDL-WN-cNH"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,11 +67,8 @@
                             <constraint firstItem="ApM-UN-KmT" firstAttribute="top" secondItem="Ylp-33-fH1" secondAttribute="bottom" constant="10" id="FMx-ku-6cm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ylp-33-fH1" secondAttribute="trailing" constant="20" id="JoH-Xi-wql"/>
                             <constraint firstItem="lDW-hs-BrA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T8W-je-mUY"/>
-                            <constraint firstItem="YVx-rV-kh6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aoz-a9-13S"/>
                             <constraint firstItem="lDW-hs-BrA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="maS-qL-vgm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YVx-rV-kh6" secondAttribute="trailing" id="puz-KS-RCH"/>
                             <constraint firstItem="Ylp-33-fH1" firstAttribute="top" secondItem="lDW-hs-BrA" secondAttribute="bottom" constant="10" id="tSs-yx-16n"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="YVx-rV-kh6" secondAttribute="bottom" id="tcL-1w-u8R"/>
                             <constraint firstItem="ApM-UN-KmT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uI1-Te-i3d"/>
                         </constraints>
                     </view>
@@ -87,7 +77,6 @@
                         <outlet property="TotalOldGroundsCount" destination="ApM-UN-KmT" id="MIP-7B-xlO"/>
                         <outlet property="TotalVisitCount" destination="UXX-Ls-4KK" id="kkh-nN-Z9a"/>
                         <outlet property="WhereIsHome" destination="Ylp-33-fH1" id="JNt-Hg-Jek"/>
-                        <outlet property="bannerView" destination="YVx-rV-kh6" id="qys-dz-WGR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
