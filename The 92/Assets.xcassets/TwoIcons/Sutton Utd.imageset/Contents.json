@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Grimsby Town.png",
+      "filename" : "Sutton.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Sutton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Sutton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
