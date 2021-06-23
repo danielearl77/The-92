@@ -15,6 +15,11 @@ class SettingsPrivacyViewController: UIViewController {
     func loadTextIntoView() {
         let versionNumber = Bundle.main.infoDictionary!["CFBundleShortVersionString"]!
         
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        let copyrightYear = dateFormatter.string(from: date)
+        
         let headerFont = UIFont.boldSystemFont(ofSize: 18.0)
         let bodyFont = UIFont.systemFont(ofSize: 15.0)
         
@@ -42,7 +47,7 @@ class SettingsPrivacyViewController: UIViewController {
         let privacyHeader = "Privacy\n"
         let privacyBody = "This app (The 92) stores a record of football grounds a user has visited. No personal identifying information is stored, harvested, or transmitted back to us (phone-app.co.uk). This app stores photos that the user chooses to add to a stadium visit record, that may be stored elsewhere on the device. We (phone-app.co.uk) do not have access to the visit records or photos stored in this app. The user may remove all stored data in this app by accessing the settings page and touching on Reset Stadium Count, or Remove Photos.\n\nThis app uses Google Ads on the home page, but does not serve personalised ads. For more information on how Google Ads may use your data please visit https://policies.google.com/privacy.\n\n"
         let creditHeader = "Credits\n"
-        let creditBody = "THE 92\nCopyright (c) 2020 Daniel Earl\nBackground Image and Icon Image courtesy of iStockPhoto, all other images and icons copyright (c) D. Earl. For more information or to get in touch please visit our website.\n\nVersion Number: \(versionNumber)"
+        let creditBody = "THE 92\nCopyright (c) 2020 - \(copyrightYear) D. Earl\nBackground Image and Icon Image courtesy of iStockPhoto, all other images and icons copyright (c) D. Earl. For more information or to get in touch please visit our website.\n\nVersion Number: \(versionNumber)"
         
         let privacyText = NSMutableAttributedString(string: aboutHeader, attributes: headerAttributes)
         let aboutBodyText = NSAttributedString(string: aboutBody, attributes: bodyAttributes)
