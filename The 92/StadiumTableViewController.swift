@@ -232,6 +232,7 @@ class StadiumTableViewController: UITableViewController {
             cell.teamName.text = teamName
             cell.stadiumName.text = stadiumName
             cell.teamVisitCount.text = ""
+            cell.teamVisitCountImg.image = UIImage(named: "NoVisitCounter")
             let teamIcon: UIImage=UIImage(named: teamName ?? "teamIconPlaceholder") ?? UIImage(named: "teamIconPlaceholder")!
             cell.teamLogo.image=teamIcon
         } else {
