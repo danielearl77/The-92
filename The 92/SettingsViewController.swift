@@ -28,6 +28,10 @@ class SettingsViewController: UIViewController {
             SettingsView.isHidden = true
             PrivacyView.isHidden = true
             SupportUsView.isHidden = false
+        } else if ChangeView.selectedSegmentIndex == 3 {
+            SettingsView.isHidden = false
+            PrivacyView.isHidden = false
+            SupportUsView.isHidden = true
         }
     }
     
@@ -44,6 +48,10 @@ class SettingsViewController: UIViewController {
             SettingsView.isHidden = true
             PrivacyView.isHidden = true
             SupportUsView.isHidden = false
+        } else if ChangeView.selectedSegmentIndex == 3 {
+            SettingsView.isHidden = false
+            PrivacyView.isHidden = false
+            SupportUsView.isHidden = true
         }
         super.viewDidLoad()
         // Do any additional setup after loading the view.
