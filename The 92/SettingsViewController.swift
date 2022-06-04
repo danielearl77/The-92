@@ -15,6 +15,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var SupportUsView: UIView!
     @IBOutlet weak var ChangeView: UISegmentedControl!
     
+    var fromSupportUsBtn = 0;
+    
     @IBAction func switchOutView(_ sender: Any) {
         if ChangeView.selectedSegmentIndex == 0 {
             SettingsView.isHidden = false
@@ -55,5 +57,9 @@ class SettingsViewController: UIViewController {
         }
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(fromSupportUsBtn)
     }
 }

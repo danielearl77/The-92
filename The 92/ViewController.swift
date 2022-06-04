@@ -272,6 +272,11 @@ class ViewController: UIViewController {
     }
     
     // MARK: Class Functions
+    @IBAction func SupportUs(_ sender: Any) {
+        
+        self.tabBarController?.selectedIndex = 3
+    }
+    
     func createLabel(labelTextNumber: Int) -> String {
         let textString = String(labelTextNumber)
         return textString
