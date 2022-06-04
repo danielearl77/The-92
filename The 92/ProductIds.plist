@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   ProductIds.plist
-   The 92
-
-   Created by Daniel Earl on 04/06/2022.
-   Copyright (c) 2022 Daniel Earl. All rights reserved.
--->
 <plist version="1.0">
-<dict/>
+<array>
+	<string>The92SupportUs</string>
+</array>
 </plist>

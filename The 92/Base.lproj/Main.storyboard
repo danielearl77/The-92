@@ -713,6 +713,20 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Send Tip"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyx-k7-dCP">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="718"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="iHk-Zz-Gab">
+                                        <rect key="frame" x="168.5" y="340.5" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iHk-Zz-Gab" firstAttribute="centerY" secondItem="Iyx-k7-dCP" secondAttribute="centerY" id="6Lc-1M-t1G"/>
+                                    <constraint firstItem="iHk-Zz-Gab" firstAttribute="centerX" secondItem="Iyx-k7-dCP" secondAttribute="centerX" id="Ib9-0d-GJt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eZ8-e3-GSe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -721,15 +735,26 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                             <constraint firstItem="7hw-ju-nNv" firstAttribute="top" secondItem="Efw-wk-F2Z" secondAttribute="bottom" constant="10" id="KcS-Ap-JPd"/>
                             <constraint firstItem="Efw-wk-F2Z" firstAttribute="centerX" secondItem="eA7-1t-k6h" secondAttribute="centerX" id="Nak-jK-Cja"/>
                             <constraint firstItem="YwX-Um-BaZ" firstAttribute="leading" secondItem="eZ8-e3-GSe" secondAttribute="leading" id="QXP-A2-3eQ"/>
+                            <constraint firstItem="Iyx-k7-dCP" firstAttribute="top" secondItem="eA7-1t-k6h" secondAttribute="top" id="RZe-89-A7p"/>
                             <constraint firstItem="XMQ-nt-F1h" firstAttribute="centerX" secondItem="eA7-1t-k6h" secondAttribute="centerX" id="Rte-XG-2eG"/>
                             <constraint firstItem="7hw-ju-nNv" firstAttribute="centerX" secondItem="eA7-1t-k6h" secondAttribute="centerX" id="Wko-zV-txE"/>
                             <constraint firstItem="eZ8-e3-GSe" firstAttribute="trailing" secondItem="YwX-Um-BaZ" secondAttribute="trailing" id="bbw-jY-4Xr"/>
                             <constraint firstItem="NeO-IO-Sxp" firstAttribute="centerX" secondItem="eA7-1t-k6h" secondAttribute="centerX" id="d78-h8-0fN"/>
+                            <constraint firstItem="Iyx-k7-dCP" firstAttribute="bottom" secondItem="eZ8-e3-GSe" secondAttribute="bottom" id="deR-A4-xeK"/>
                             <constraint firstItem="Efw-wk-F2Z" firstAttribute="top" secondItem="YwX-Um-BaZ" secondAttribute="bottom" constant="20" id="fvm-mP-zbY"/>
                             <constraint firstItem="YwX-Um-BaZ" firstAttribute="top" secondItem="eA7-1t-k6h" secondAttribute="top" id="hCd-Tr-DhY"/>
+                            <constraint firstItem="Iyx-k7-dCP" firstAttribute="leading" secondItem="eZ8-e3-GSe" secondAttribute="leading" id="nXs-BA-z6V"/>
+                            <constraint firstItem="Iyx-k7-dCP" firstAttribute="trailing" secondItem="eZ8-e3-GSe" secondAttribute="trailing" id="sgO-Bv-fgn"/>
                             <constraint firstItem="XMQ-nt-F1h" firstAttribute="top" secondItem="NeO-IO-Sxp" secondAttribute="bottom" constant="30" id="uY6-oT-Dtj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IAPLoadingView" destination="Iyx-k7-dCP" id="eRj-a2-Mez"/>
+                        <outlet property="ProductDetail" destination="7hw-ju-nNv" id="Bic-Y0-XTK"/>
+                        <outlet property="ProductPrice" destination="NeO-IO-Sxp" id="2tc-Ot-50Q"/>
+                        <outlet property="ProductPurchaseBtn" destination="XMQ-nt-F1h" id="BSS-qa-S23"/>
+                        <outlet property="ProductTitle" destination="Efw-wk-F2Z" id="iwL-iJ-wJe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jb2-gi-xbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
