@@ -16,6 +16,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var ChangeView: UISegmentedControl!
     
     var fromSupportUsBtn = 0;
+    let kHasTipped = "userHasSupported"
+    let kTipCount = "countOfTipsGiven"
     
     @IBAction func switchOutView(_ sender: Any) {
         if ChangeView.selectedSegmentIndex == 0 {
@@ -30,14 +32,34 @@ class SettingsViewController: UIViewController {
             SettingsView.isHidden = true
             PrivacyView.isHidden = true
             SupportUsView.isHidden = false
-        } else if ChangeView.selectedSegmentIndex == 3 {
-            SettingsView.isHidden = false
-            PrivacyView.isHidden = false
-            SupportUsView.isHidden = true
         }
     }
     
+    func hasSupported() -> Bool {
+        let userDefaults: UserDefaults = UserDefaults.standard
+        let hasUserSupported = userDefaults.bool(forKey: kHasTipped);
+        print(hasUserSupported)
+        return hasUserSupported
+    }
+    
+    func getNumberOfTipsGiven() -> Int {
+        let userDefaults: UserDefaults = UserDefaults.standard
+        return userDefaults.integer(forKey: kTipCount)
+    }
+    
     override func viewDidLoad() {
+        let tips = getNumberOfTipsGiven()
+        
+        if(!hasSupported()) {
+            print("in hasn't supported")
+            ChangeView.selectedSegmentIndex = 2
+            ChangeView.sendActions(for: .valueChanged)
+        }
+        
+        if(tips >= 3) {
+            ChangeView.setEnabled(false, forSegmentAt: 2)
+        }
+        
         if ChangeView.selectedSegmentIndex == 0 {
             SettingsView.isHidden = false
             PrivacyView.isHidden = true
@@ -50,16 +72,38 @@ class SettingsViewController: UIViewController {
             SettingsView.isHidden = true
             PrivacyView.isHidden = true
             SupportUsView.isHidden = false
-        } else if ChangeView.selectedSegmentIndex == 3 {
-            SettingsView.isHidden = false
-            PrivacyView.isHidden = false
-            SupportUsView.isHidden = true
         }
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print(fromSupportUsBtn)
+        let tips = getNumberOfTipsGiven()
+        
+        if(!hasSupported()) {
+            print("in hasn't supported")
+            ChangeView.selectedSegmentIndex = 2
+            ChangeView.sendActions(for: .valueChanged)
+        }
+        
+        if(tips >= 3) {
+            ChangeView.setEnabled(false, forSegmentAt: 2)
+        }
+        
+        if ChangeView.selectedSegmentIndex == 0 {
+            SettingsView.isHidden = false
+            PrivacyView.isHidden = true
+            SupportUsView.isHidden = true
+        } else if ChangeView.selectedSegmentIndex == 1 {
+            SettingsView.isHidden = true
+            PrivacyView.isHidden = false
+            SupportUsView.isHidden = true
+        } else if ChangeView.selectedSegmentIndex == 2 {
+            SettingsView.isHidden = true
+            PrivacyView.isHidden = true
+            SupportUsView.isHidden = false
+        }
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
 }

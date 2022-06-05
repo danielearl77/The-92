@@ -37,7 +37,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var TotalVisitCount: UILabel!
     @IBOutlet weak var TotalOldGroundsCount: UILabel!
     @IBOutlet weak var WhereIsHome: UILabel!
-        
+    @IBOutlet weak var SupportUsBtn: UIButton!
+    
     // MARK: Vars
     var mainVisitText = " of 92"
     var oldVisitText = " other grounds"
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
     let kLaunchCount = "appLaunchNumber"
     let kHasReivewed = "appUserReviewPrompt"
     let kHalfConfetti = "half92Done"
+    let kHasTipped = "userHasSupported"
     
     // MARK: Core Data Functions
     func getHomeStadium() -> Bool {
@@ -273,8 +275,16 @@ class ViewController: UIViewController {
     
     // MARK: Class Functions
     @IBAction func SupportUs(_ sender: Any) {
-        
         self.tabBarController?.selectedIndex = 3
+    }
+    
+    func hasSupported() {
+        let userDefaults: UserDefaults = UserDefaults.standard
+        let hasUserSupported = userDefaults.bool(forKey: kHasTipped);
+        if(hasUserSupported) {
+            SupportUsBtn.isHidden = true
+        }
+        
     }
     
     func createLabel(labelTextNumber: Int) -> String {
@@ -385,7 +395,7 @@ class ViewController: UIViewController {
     
     // MARK: - View
     override func viewDidAppear(_ animated: Bool) {
-        
+        hasSupported()
         let visits = getPrimaryVisitCount()
         let oldVisits = getOldVisitCount()
         let userDefaults: UserDefaults = UserDefaults.standard
@@ -426,6 +436,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         firstLaunch()
         getSetVersion()
+        hasSupported()
         
         let userDefaults: UserDefaults = UserDefaults.standard
         let halfCount = userDefaults.bool(forKey: kHalfConfetti)
