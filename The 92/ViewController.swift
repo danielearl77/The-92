@@ -20,13 +20,13 @@ class ViewController: UIViewController {
      * NEW LIVE VERSION NUMBER FOR THE NEW SEASON
      * Default value is -1 to not trigger new season updates
      */
-        let newSeasonVersionNumber = "2.0"
+        let newSeasonVersionNumber = "-1"
     /*
      * Enter new values here AND update Team, Stadium, and Stadium Map Arrays as needed
      * comment out any not needed for this update
      */
-        let promotedTeams = ["Sutton Utd","Hartlepool Utd"]
-        let relegatedTeams = ["Grimsby Town","Southend Utd"]
+        let promotedTeams = ["Stockport County","Team Name"]
+        let relegatedTeams = ["Scunthorpe Utd","Oldham Athletic"]
         //let changedGroundName = ["Team Name":"Team Name"]
         //let movedGrounds = ["Team Name":"Team Name"]
     /*
@@ -363,7 +363,10 @@ class ViewController: UIViewController {
                 if all92Visits.count < 5 {
                     return false
                 } else {
-                    SKStoreReviewController.requestReview()
+                    //SKStoreReviewController.requestReview()
+                    if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                        SKStoreReviewController.requestReview(in: scene)
+                    }
                     userDefaults.set(true, forKey: kHasReivewed)
                     return true
                 }
