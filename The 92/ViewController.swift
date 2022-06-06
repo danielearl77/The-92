@@ -25,7 +25,7 @@ class ViewController: UIViewController {
      * Enter new values here AND update Team, Stadium, and Stadium Map Arrays as needed
      * comment out any not needed for this update
      */
-        let promotedTeams = ["Stockport County","Team Name"]
+        let promotedTeams = ["Stockport County","Grimsby Town"]
         let relegatedTeams = ["Scunthorpe Utd","Oldham Athletic"]
         //let changedGroundName = ["Team Name":"Team Name"]
         //let movedGrounds = ["Team Name":"Team Name"]
