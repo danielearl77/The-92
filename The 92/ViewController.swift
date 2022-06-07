@@ -20,7 +20,7 @@ class ViewController: UIViewController {
      * NEW LIVE VERSION NUMBER FOR THE NEW SEASON
      * Default value is -1 to not trigger new season updates
      */
-        let newSeasonVersionNumber = "-1"
+        let newSeasonVersionNumber = "3.0"
     /*
      * Enter new values here AND update Team, Stadium, and Stadium Map Arrays as needed
      * comment out any not needed for this update
@@ -275,7 +275,7 @@ class ViewController: UIViewController {
     
     // MARK: Class Functions
     @IBAction func SupportUs(_ sender: Any) {
-        self.tabBarController?.selectedIndex = 3
+        //self.tabBarController?.selectedIndex = 3
     }
     
     func hasSupported() {

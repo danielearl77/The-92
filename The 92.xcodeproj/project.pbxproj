@@ -18,12 +18,12 @@
 		1487AA0A24FEB19100F91892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1487AA0924FEB19100F91892 /* Assets.xcassets */; };
 		1487AA0D24FEB19100F91892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1487AA0B24FEB19100F91892 /* LaunchScreen.storyboard */; };
 		1487AA1624FEB1AC00F91892 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1487AA1524FEB1AC00F91892 /* StoreKit.framework */; };
-		1491089C284BB305008DABAE /* SupportUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491089B284BB305008DABAE /* SupportUsViewController.swift */; };
 		1491089E284BB868008DABAE /* IAP Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491089D284BB868008DABAE /* IAP Manager.swift */; };
 		149108A0284BB879008DABAE /* ProductIds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1491089F284BB879008DABAE /* ProductIds.plist */; };
 		14911AEF25B1900B00BC8B56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14911AEE25B1900B00BC8B56 /* CoreGraphics.framework */; };
 		14C956582501204E00E753E8 /* SelectLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C956572501204E00E753E8 /* SelectLeagueViewController.swift */; };
 		14C9565A2501304300E753E8 /* StadiumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C956592501304300E753E8 /* StadiumTableViewController.swift */; };
+		14D225AF284F3A7900AD182E /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D225AE284F3A7900AD182E /* SupportViewController.swift */; };
 		14DDDADC250B5FA8006D3C19 /* StadiumMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDDADB250B5FA8006D3C19 /* StadiumMapViewController.swift */; };
 		14E6DB9925850EFB005789F6 /* SettingsPrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6DB9825850EFB005789F6 /* SettingsPrivacyViewController.swift */; };
 		14E8581B25076BF0000583A0 /* StadiumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E8581A25076BF0000583A0 /* StadiumDetailViewController.swift */; };
@@ -45,12 +45,12 @@
 		1487AA0C24FEB19100F91892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1487AA0E24FEB19100F91892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1487AA1524FEB1AC00F91892 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		1491089B284BB305008DABAE /* SupportUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportUsViewController.swift; sourceTree = "<group>"; };
 		1491089D284BB868008DABAE /* IAP Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IAP Manager.swift"; sourceTree = "<group>"; };
 		1491089F284BB879008DABAE /* ProductIds.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProductIds.plist; sourceTree = "<group>"; };
 		14911AEE25B1900B00BC8B56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14C956572501204E00E753E8 /* SelectLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLeagueViewController.swift; sourceTree = "<group>"; };
 		14C956592501304300E753E8 /* StadiumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumTableViewController.swift; sourceTree = "<group>"; };
+		14D225AE284F3A7900AD182E /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		14DDDADB250B5FA8006D3C19 /* StadiumMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumMapViewController.swift; sourceTree = "<group>"; };
 		14E6DB9825850EFB005789F6 /* SettingsPrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPrivacyViewController.swift; sourceTree = "<group>"; };
 		14E8581A25076BF0000583A0 /* StadiumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumDetailViewController.swift; sourceTree = "<group>"; };
@@ -109,9 +109,9 @@
 				1487AA0B24FEB19100F91892 /* LaunchScreen.storyboard */,
 				1487AA0E24FEB19100F91892 /* Info.plist */,
 				1487AA0624FEB19000F91892 /* The_92.xcdatamodeld */,
-				1491089B284BB305008DABAE /* SupportUsViewController.swift */,
 				1491089D284BB868008DABAE /* IAP Manager.swift */,
 				1491089F284BB879008DABAE /* ProductIds.plist */,
+				14D225AE284F3A7900AD182E /* SupportViewController.swift */,
 			);
 			path = "The 92";
 			sourceTree = "<group>";
@@ -200,6 +200,7 @@
 			files = (
 				14F74B0625383983007BC294 /* SettingsSettingViewController.swift in Sources */,
 				1487AA0224FEB19000F91892 /* ViewController.swift in Sources */,
+				14D225AF284F3A7900AD182E /* SupportViewController.swift in Sources */,
 				14560F202546C02D00AF9F73 /* StadiumMapAnnotation.swift in Sources */,
 				1487A9FE24FEB19000F91892 /* AppDelegate.swift in Sources */,
 				14C9565A2501304300E753E8 /* StadiumTableViewController.swift in Sources */,
@@ -211,7 +212,6 @@
 				1491089E284BB868008DABAE /* IAP Manager.swift in Sources */,
 				14C956582501204E00E753E8 /* SelectLeagueViewController.swift in Sources */,
 				14E8581B25076BF0000583A0 /* StadiumDetailViewController.swift in Sources */,
-				1491089C284BB305008DABAE /* SupportUsViewController.swift in Sources */,
 				14E8581D2509097D000583A0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earldr.The-92";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -386,7 +386,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earldr.The-92";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

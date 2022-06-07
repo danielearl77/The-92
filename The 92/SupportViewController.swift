@@ -1,16 +1,16 @@
 //
-//  SupportUsViewController.swift
+//  SupportViewController.swift
 //  The 92
 //
-//  Created by Daniel Earl on 04/06/2022.
+//  Created by Daniel Earl on 07/06/2022.
 //  Copyright © 2022 Daniel Earl. All rights reserved.
 //
 
 import UIKit
 import StoreKit
 
-class SupportUsViewController: UIViewController {
-
+class SupportViewController: UIViewController {
+    
     @IBOutlet weak var ProductTitle: UILabel!
     @IBOutlet weak var ProductDetail: UILabel!
     @IBOutlet weak var ProductPrice: UILabel!
@@ -47,8 +47,15 @@ class SupportUsViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func CloseView(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    
     // MARK: - In App Purchase
+    
     @IBAction func purchaseTip(_ sender: Any) {
+        print("Buy Now")
         if !self.purchase(product: products[0]) {
             let alertMsg = "WARNING: In App Purchases not allowed on this device."
             let alert = UIAlertController(title: "Upgrade Purchase", message: alertMsg, preferredStyle: .alert)
@@ -57,6 +64,7 @@ class SupportUsViewController: UIViewController {
         }
     }
     
+
     func purchase(product: SKProduct) -> Bool {
         if !IAPManager.shared.canMakePayments() {
             return false
@@ -68,6 +76,7 @@ class SupportUsViewController: UIViewController {
                     switch result {
                         case .success(_):
                             self.updateNumberOfTipsGiven()
+                            self.dismiss(animated: true)
                         case .failure(let error):
                             self.showIAPRelatedError(error)
                     }
