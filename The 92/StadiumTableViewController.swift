@@ -20,13 +20,113 @@ class StadiumTableViewController: UITableViewController {
     var visitCount: [String:Int] = [:]
     var oldGrounds: [NSManagedObject] = []
     var currentGrounds: [NSManagedObject] = []
-    var groundNameList = ["Arsenal":"The Emirates","Aston Villa":"Villa Park","Brighton":"The Amex","Burnley":"Turf Moor","Chelsea":"Stamford Bridge","Crystal Palace":"Selhurst Park","Everton":"Goodison Park","Fulham":"Craven Cottage","Leeds Utd":"Elland Road","Leicester":"King Power Stadium","Liverpool":"Anfield","Man City":"Etihad Stadium","Man Utd":"Old Trafford","Newcastle":"St James Park","Sheffield Utd":"Bramall Lane","Southampton":"St Marys Stadium","Tottenham":"Tottenham Hotspur Stadium","West Brom":"The Hawthorns","West Ham":"The London Stadium","Wolves":"Molineux","Barnsley":"Oakwell","Birmingham":"St Andrews","Blackburn":"Ewood Park","Brentford":"Community Stadium","Bristol City":"Ashton Gate","Bournemouth":"Vitality Stadium","Cardiff":"Cardiff City Stadium","Coventry":"Ricoh Arena","Derby County":"Pride Park","Huddersfield":"John Smiths Stadium","Luton Town":"Kenilworth Road","Middlesbrough":"Riverside Stadium","Millwall":"The New Den","Nottingham Forest":"The City Ground","Norwich City":"Carrow Road","Preston":"Deepdale","QPR":"Kiyan Prince Foundation Stadium","Reading":"Madejski Stadium","Rotherham":"New York Stadium","Sheffield Wednesday":"Hillsborough","Stoke":"bet365 Stadium","Swansea":"Liberty Stadium","Watford":"Vicarage Road","Wycombe Wanderers":"Adams Park","Accrington Stanley":"Wham Stadium","AFC Wimbledon":"Plough Lane","Blackpool":"Bloomfield Road","Bristol Rovers":"Memorial Stadium","Burton Albion":"Pirelli Stadium","Charlton Athletic":"The Valley","Crewe Alexandra":"Alexandra Stadium","Doncaster Rovers":"Keepmoat Stadium","Fleetwood":"Highbury Stadium","Gillingham":"Priestfield","Hull City":"KCOM Stadium","Ipswich":"Portman Road","Lincoln City":"LNER Stadium","MK Dons":"Stadium MK","Northampton Town":"PTS Academy Stadium","Oxford Utd":"Kassam Stadium","Peterborough Utd":"Weston Homes Stadium","Plymouth":"Home Park","Portsmouth":"Fratton Park","Rochdale":"Crown Oil Arena","Shrewsbury Town":"Montgomery Waters Meadow","Sunderland":"Stadium of Light","Swindon Town":"Country Ground","Wigan":"DW Stadium","Barrow":"Progression Solicitors Stadium","Bradford City":"Utilita Energy Stadium","Bolton":"University of Bolton Stadium","Cambridge Utd":"Abbey Stadium","Carlisle Utd":"Brunton Park","Cheltenham Town":"Jonny-Rocks Stadium","Colchester Utd":"JobServe Stadium","Crawley Town":"Peoples Pension Stadium","Exeter City":"St James Park","Forest Green Rovers":"The New Lawn","Hartlepool Utd":"Victoria Park","Harrogate Town":"CNG Stadium","Leyton Orient":"Breyer Group Stadium","Mansfield Town":"One Call Stadium","Morecambe":"Globe Arena","Newport County":"Rodney Parade","Oldham Athletic":"Boundary Park","Port Vale":"Vale Park","Salford City":"Peninsula Stadium","Scunthorpe Utd":"Sands Venue Stadium","Sutton Utd":"Gander Green Lane","Stevenage":"Lamex Stadium","Tranmere Rovers":"Prenton Park","Walsall":"Banks Stadium"]
+    var groundNameList = [  "Accrington Stanley":"Wham Stadium",
+                            "AFC Wimbledon":"Plough Lane",
+                            "Arsenal":"The Emirates",
+                            "Aston Villa":"Villa Park",
+                            "Barnsley":"Oakwell",
+                            "Barrow":"The Dunes Hotel Stadium",
+                            "Birmingham":"St Andrews",
+                            "Blackburn":"Ewood Park",
+                            "Blackpool":"Bloomfield Road",
+                            "Bolton":"University of Bolton Stadium",
+                            "Bournemouth":"Vitality Stadium",
+                            "Bradford City":"Utilita Energy Stadium",
+                            "Brighton":"The Amex",
+                            "Brentford":"Community Stadium",
+                            "Bristol City":"Ashton Gate",
+                            "Bristol Rovers":"Memorial Stadium",
+                            "Burnley":"Turf Moor",
+                            "Burton Albion":"Pirelli Stadium",
+                            "Chelsea":"Stamford Bridge",
+                            "Crystal Palace":"Selhurst Park",
+                            "Cardiff":"Cardiff City Stadium",
+                            "Coventry":"Coventry Building Society Arena",
+                            "Charlton Athletic":"The Valley",
+                            "Crewe Alexandra":"Alexandra Stadium",
+                            "Cambridge Utd":"Abbey Stadium",
+                            "Carlisle Utd":"Brunton Park",
+                            "Cheltenham Town":"Jonny-Rocks Stadium",
+                            "Colchester Utd":"JobServe Stadium",
+                            "Crawley Town":"Peoples Pension Stadium",
+                            "Derby County":"Pride Park",
+                            "Doncaster Rovers":"Keepmoat Stadium",
+                            "Everton":"Goodison Park",
+                            "Exeter City":"St James Park",
+                            "Fleetwood":"Highbury Stadium",
+                            "Forest Green Rovers":"The New Lawn",
+                            "Fulham":"Craven Cottage",
+                            "Gillingham":"Priestfield",
+                            "Grimsby Town":"Blundell Park",
+                            "Hartlepool Utd":"Victoria Park",
+                            "Harrogate Town":"CNG Stadium",
+                            "Huddersfield":"John Smiths Stadium",
+                            "Hull City":"KCOM Stadium",
+                            "Ipswich":"Portman Road",
+                            "Leeds Utd":"Elland Road",
+                            "Leicester":"King Power Stadium",
+                            "Lincoln City":"LNER Stadium",
+                            "Liverpool":"Anfield",
+                            "Luton Town":"Kenilworth Road",
+                            "Leyton Orient":"Breyer Group Stadium",
+                            "Man City":"Etihad Stadium",
+                            "Man Utd":"Old Trafford",
+                            "Mansfield Town":"One Call Stadium",
+                            "Morecambe":"Globe Arena",
+                            "Middlesbrough":"Riverside Stadium",
+                            "Millwall":"The New Den",
+                            "MK Dons":"Stadium MK",
+                            "Newcastle":"St James Park",
+                            "Newport County":"Rodney Parade",
+                            "Nottingham Forest":"The City Ground",
+                            "Northampton Town":"PTS Academy Stadium",
+                            "Norwich City":"Carrow Road",
+                            "Oxford Utd":"Kassam Stadium",
+                            "Preston":"Deepdale",
+                            "Peterborough Utd":"Weston Homes Stadium",
+                            "Plymouth":"Home Park",
+                            "Portsmouth":"Fratton Park",
+                            "Port Vale":"Vale Park",
+                            "QPR":"Kiyan Prince Foundation Stadium",
+                            "Reading":"Madejski Stadium",
+                            "Rotherham":"New York Stadium",
+                            "Rochdale":"Crown Oil Arena",
+                            "Sheffield Utd":"Bramall Lane",
+                            "Southampton":"St Marys Stadium",
+                            "Sheffield Wednesday":"Hillsborough",
+                            "Stoke":"bet365 Stadium",
+                            "Swansea":"Liberty Stadium",
+                            "Shrewsbury Town":"Montgomery Waters Meadow",
+                            "Sunderland":"Stadium of Light",
+                            "Swindon Town":"Country Ground",
+                            "Salford City":"Peninsula Stadium",
+                            "Sutton Utd":"VBS Community Stadium",
+                            "Stevenage":"Lamex Stadium",
+                            "Stockport County":"Edgeley Park",
+                            "Tranmere Rovers":"Prenton Park",
+                            "Tottenham":"Tottenham Hotspur Stadium",
+                            "West Brom":"The Hawthorns",
+                            "West Ham":"The London Stadium",
+                            "Wolves":"Molineux",
+                            "Watford":"Vicarage Road",
+                            "Wycombe Wanderers":"Adams Park",
+                            "Wigan":"DW Stadium",
+                            "Walsall":"Banks Stadium"]
+
+    /*
+        OLD TEAMS
+        "Scunthorpe Utd":"Sands Venue Stadium"
+        "Oldham Athletic":"Boundary Park"
+     */
     
     // MARK: Team Lists
-    var premierLeagueTeams = ["Arsenal","Aston Villa","Brentford","Brighton","Burnley","Chelsea","Crystal Palace","Everton","Leeds Utd","Leicester","Liverpool","Man City","Man Utd","Newcastle","Norwich City","Southampton","Tottenham","Watford","West Ham","Wolves"]
-    var championshipTeams: [String] = ["Barnsley","Birmingham","Blackburn","Blackpool","Bristol City","Bournemouth","Cardiff","Coventry","Derby County","Fulham","Huddersfield","Hull City","Luton Town","Middlesbrough","Millwall","Nottingham Forest","Peterborough Utd","Preston","QPR","Reading","Sheffield Utd","Stoke","Swansea","West Brom"]
-    var leagueOneTeams: [String] = ["Accrington Stanley","AFC Wimbledon","Bolton","Burton Albion","Cambridge Utd","Charlton Athletic","Cheltenham Town","Crewe Alexandra","Doncaster Rovers","Fleetwood","Gillingham","Ipswich","Lincoln City","MK Dons","Morecambe","Oxford Utd","Plymouth","Portsmouth","Rotherham","Sheffield Wednesday","Shrewsbury Town","Sunderland","Wigan","Wycombe Wanderers"]
-    var leagueTwoTeams: [String] = ["Barrow","Bradford City","Bristol Rovers","Carlisle Utd","Colchester Utd","Crawley Town","Exeter City","Forest Green Rovers","Harrogate Town","Hartlepool Utd","Leyton Orient","Mansfield Town","Newport County","Northampton Town","Oldham Athletic","Port Vale","Rochdale","Salford City","Scunthorpe Utd","Stevenage","Sutton Utd","Swindon Town","Tranmere Rovers","Walsall"]
+    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton","Chelsea","Crystal Palace","Everton","Fulham","Leeds Utd","Leicester","Liverpool","Man City","Man Utd","Newcastle","Nottingham Forest","Southampton","Tottenham","West Ham","Wolves"]
+    
+    var championshipTeams: [String] = ["Birmingham","Blackburn","Blackpool","Bristol City","Burnley","Cardiff","Coventry","Huddersfield","Hull City","Luton Town","Middlesbrough","Millwall","Norwich City","Preston","QPR","Reading","Rotherham","Sheffield Utd","Stoke","Sunderland","Swansea","Watford","West Brom","Wigan"]
+    
+    var leagueOneTeams: [String] = ["Accrington Stanley","Barnsley","Bolton","Bristol Rovers","Burton Albion","Cambridge Utd","Charlton Athletic","Cheltenham Town","Derby County","Exeter City","Fleetwood","Forest Green Rovers","Ipswich","Lincoln City","MK Dons","Morecambe","Oxford Utd","Peterborough Utd","Plymouth","Portsmouth","Port Vale","Sheffield Wednesday","Shrewsbury Town","Wycombe Wanderers"]
+    
+    var leagueTwoTeams: [String] = ["AFC Wimbledon","Barrow","Bradford City","Carlisle Utd","Colchester Utd","Crawley Town","Crewe Alexandra","Doncaster Rovers","Gillingham","Grimsby Town","Harrogate Town","Hartlepool Utd","Leyton Orient","Mansfield Town","Newport County","Northampton Town","Rochdale","Salford City","Stevenage","Stockport County","Sutton Utd","Swindon Town","Tranmere Rovers","Walsall"]
    
     // MARK: Outlets
     @IBOutlet weak var LeagueCount: UIBarButtonItem!

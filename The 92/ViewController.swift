@@ -20,15 +20,15 @@ class ViewController: UIViewController {
      * NEW LIVE VERSION NUMBER FOR THE NEW SEASON
      * Default value is -1 to not trigger new season updates
      */
-        let newSeasonVersionNumber = "2.0"
+        let newSeasonVersionNumber = "3.0"
     /*
      * Enter new values here AND update Team, Stadium, and Stadium Map Arrays as needed
      * comment out any not needed for this update
      */
-        let promotedTeams = ["Sutton Utd","Hartlepool Utd"]
-        let relegatedTeams = ["Grimsby Town","Southend Utd"]
-        //let changedGroundName = ["Team Name":"Team Name"]
-        let movedGrounds = ["Coventry":"Ricoh Arena"]
+        let promotedTeams = ["Stockport County","Grimsby Town"]
+        let relegatedTeams = ["Scunthorpe Utd","Oldham Athletic"]
+        let changedGroundName = ["Coventry":"Coventry Building Society Arena","Hull City":"KCOM Stadium","Barrow":"The Dunes Hotel Stadium","Sutton Utd":"VBS Community Stadium"]
+        //let movedGrounds = ["Team Name":"Team Name"]
     /*
      * END OF NEW SEASON VERSION NUMBER
      */
@@ -37,7 +37,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var TotalVisitCount: UILabel!
     @IBOutlet weak var TotalOldGroundsCount: UILabel!
     @IBOutlet weak var WhereIsHome: UILabel!
-        
+    @IBOutlet weak var SupportUsBtn: UIButton!
+    
     // MARK: Vars
     var mainVisitText = " of 92"
     var oldVisitText = " other grounds"
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
     let kLaunchCount = "appLaunchNumber"
     let kHasReivewed = "appUserReviewPrompt"
     let kHalfConfetti = "half92Done"
+    let kHasTipped = "userHasSupported"
     
     // MARK: Core Data Functions
     func getHomeStadium() -> Bool {
@@ -271,7 +273,16 @@ class ViewController: UIViewController {
         return true
     }
     
-    // MARK: Class Functions
+    // MARK: Class Functions   
+    func hasSupported() {
+        let userDefaults: UserDefaults = UserDefaults.standard
+        let hasUserSupported = userDefaults.bool(forKey: kHasTipped);
+        if(hasUserSupported) {
+            SupportUsBtn.isHidden = true
+        }
+        
+    }
+    
     func createLabel(labelTextNumber: Int) -> String {
         let textString = String(labelTextNumber)
         return textString
@@ -348,7 +359,10 @@ class ViewController: UIViewController {
                 if all92Visits.count < 5 {
                     return false
                 } else {
-                    SKStoreReviewController.requestReview()
+                    //SKStoreReviewController.requestReview()
+                    if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                        SKStoreReviewController.requestReview(in: scene)
+                    }
                     userDefaults.set(true, forKey: kHasReivewed)
                     return true
                 }
@@ -366,20 +380,21 @@ class ViewController: UIViewController {
         for r in relegatedTeams {
             _ = updateRelegation(team: r)
         }
-        /*
+    
         for n in changedGroundName {
             _ = updateGroundName(team: n.key, ground: n.value)
         }
-        */
+        /*
         for m in movedGrounds {
             _ = updateNewGround(team: m.key)
         }
+        */
      
     }
     
     // MARK: - View
     override func viewDidAppear(_ animated: Bool) {
-        
+        hasSupported()
         let visits = getPrimaryVisitCount()
         let oldVisits = getOldVisitCount()
         let userDefaults: UserDefaults = UserDefaults.standard
@@ -420,6 +435,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         firstLaunch()
         getSetVersion()
+        hasSupported()
         
         let userDefaults: UserDefaults = UserDefaults.standard
         let halfCount = userDefaults.bool(forKey: kHalfConfetti)
