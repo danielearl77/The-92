@@ -273,11 +273,7 @@ class ViewController: UIViewController {
         return true
     }
     
-    // MARK: Class Functions
-    @IBAction func SupportUs(_ sender: Any) {
-        //self.tabBarController?.selectedIndex = 3
-    }
-    
+    // MARK: Class Functions   
     func hasSupported() {
         let userDefaults: UserDefaults = UserDefaults.standard
         let hasUserSupported = userDefaults.bool(forKey: kHasTipped);

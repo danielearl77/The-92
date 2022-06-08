@@ -64,7 +64,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="SupportUs"/>
                                 <connections>
-                                    <action selector="SupportUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qK9-0M-SST"/>
                                     <segue destination="55c-gW-Ti9" kind="presentation" id="shJ-sy-Wei"/>
                                 </connections>
                             </button>
@@ -107,11 +106,11 @@
             <objects>
                 <viewController id="55c-gW-Ti9" customClass="SupportViewController" customModule="The_92" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZF-Ro-1TO">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="664"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gex-Pd-p4W">
-                                <rect key="frame" x="319" y="59" width="35" height="35"/>
+                                <rect key="frame" x="359" y="59" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="JOV-Wd-Rmv"/>
                                     <constraint firstAttribute="height" constant="35" id="uL9-a8-Nfd"/>
@@ -124,13 +123,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKt-xD-za5">
-                                <rect key="frame" x="137" y="64" width="100" height="24"/>
+                                <rect key="frame" x="157" y="64" width="100" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="UFG-sb-232">
-                                <rect key="frame" x="20" y="108" width="334" height="230"/>
+                                <rect key="frame" x="20" y="108" width="374" height="230"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="rkb-if-YaE"/>
@@ -145,7 +144,7 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okq-Bg-Ml7">
-                                <rect key="frame" x="127" y="471" width="120" height="40"/>
+                                <rect key="frame" x="147" y="471" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BkV-eo-RKD"/>
                                     <constraint firstAttribute="width" constant="120" id="jTD-uQ-Mlm"/>
@@ -157,28 +156,28 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1n-m1-c6r">
-                                <rect key="frame" x="138" y="358" width="98" height="21"/>
+                                <rect key="frame" x="158" y="358" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsh-aq-gzP">
-                                <rect key="frame" x="135" y="420" width="104" height="21"/>
+                                <rect key="frame" x="155" y="420" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc7-ZF-52L">
-                                <rect key="frame" x="132.5" y="389" width="109" height="21"/>
+                                <rect key="frame" x="152.5" y="389" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhG-17-iLF">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="664"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Fb0-QS-pdZ">
-                                        <rect key="frame" x="168.5" y="313.5" width="37" height="37"/>
+                                        <rect key="frame" x="188.5" y="402.5" width="37" height="37"/>
                                         <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </activityIndicatorView>
                                 </subviews>
@@ -893,7 +892,7 @@ Remove Photos will remove all the photos from the app, but will not delete the o
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5dc-fm-MIN"/>
-        <segue reference="zEM-9Q-qLN"/>
+        <segue reference="shJ-sy-Wei"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="2121" height="3000"/>
