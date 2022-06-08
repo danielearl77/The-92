@@ -27,7 +27,7 @@ class ViewController: UIViewController {
      */
         let promotedTeams = ["Stockport County","Grimsby Town"]
         let relegatedTeams = ["Scunthorpe Utd","Oldham Athletic"]
-        //let changedGroundName = ["Team Name":"Team Name"]
+        let changedGroundName = ["Coventry":"Coventry Building Society Arena","Hull City":"KCOM Stadium","Barrow":"The Dunes Hotel Stadium","Sutton Utd":"VBS Community Stadium"]
         //let movedGrounds = ["Team Name":"Team Name"]
     /*
      * END OF NEW SEASON VERSION NUMBER
@@ -384,11 +384,11 @@ class ViewController: UIViewController {
         for r in relegatedTeams {
             _ = updateRelegation(team: r)
         }
-        /*
+    
         for n in changedGroundName {
             _ = updateGroundName(team: n.key, ground: n.value)
         }
-    
+        /*
         for m in movedGrounds {
             _ = updateNewGround(team: m.key)
         }

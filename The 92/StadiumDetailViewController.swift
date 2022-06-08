@@ -82,7 +82,6 @@ class StadiumDetailViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func DeleteVisits(_ sender: Any) {
-        print("delete visit")
         let messageContent = "This will delete ALL visits to " + groundName + "\nAre You Sure?"
         let defaultAction = UIAlertAction(title: "OK", style: .default) {(action) in
             if self.deleteVisit(groundName: self.groundName) {
@@ -375,11 +374,7 @@ class StadiumDetailViewController: UIViewController, UIImagePickerControllerDele
         picker.sourceType = .photoLibrary
         present(picker, animated: true)
     }
-    
-    func testFunc(test: String) {
-        print(test)
-    }
-    
+        
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let userPickedImage = info[.editedImage] as? UIImage else { return }
         UserAddedPhoto.image = userPickedImage

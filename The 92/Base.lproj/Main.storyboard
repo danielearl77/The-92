@@ -111,9 +111,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gex-Pd-p4W">
-                                <rect key="frame" x="295" y="64" width="59" height="31"/>
+                                <rect key="frame" x="319" y="59" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="JOV-Wd-Rmv"/>
+                                    <constraint firstAttribute="height" constant="35" id="uL9-a8-Nfd"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <buttonConfiguration key="configuration" style="plain" image="CancelButton"/>
                                 <connections>
                                     <action selector="CloseView:" destination="55c-gW-Ti9" eventType="touchUpInside" id="nyD-X2-p52"/>
                                 </connections>
@@ -125,7 +130,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="UFG-sb-232">
-                                <rect key="frame" x="20" y="115" width="334" height="230"/>
+                                <rect key="frame" x="20" y="108" width="334" height="230"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="rkb-if-YaE"/>
@@ -140,7 +145,7 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okq-Bg-Ml7">
-                                <rect key="frame" x="127" y="478" width="120" height="40"/>
+                                <rect key="frame" x="127" y="471" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BkV-eo-RKD"/>
                                     <constraint firstAttribute="width" constant="120" id="jTD-uQ-Mlm"/>
@@ -152,19 +157,19 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1n-m1-c6r">
-                                <rect key="frame" x="138" y="365" width="98" height="21"/>
+                                <rect key="frame" x="138" y="358" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsh-aq-gzP">
-                                <rect key="frame" x="135" y="427" width="104" height="21"/>
+                                <rect key="frame" x="135" y="420" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc7-ZF-52L">
-                                <rect key="frame" x="132.5" y="396" width="109" height="21"/>
+                                <rect key="frame" x="132.5" y="389" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -187,13 +192,13 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                         <viewLayoutGuide key="safeArea" id="kdV-AX-o5x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UFG-sb-232" firstAttribute="top" secondItem="gex-Pd-p4W" secondAttribute="bottom" constant="20" id="4Bv-jM-Rjr"/>
+                            <constraint firstItem="UFG-sb-232" firstAttribute="top" secondItem="KKt-xD-za5" secondAttribute="bottom" constant="20" id="2oT-Eu-ebw"/>
                             <constraint firstItem="kdV-AX-o5x" firstAttribute="trailing" secondItem="UFG-sb-232" secondAttribute="trailing" constant="20" id="AfK-yh-ENp"/>
                             <constraint firstItem="kdV-AX-o5x" firstAttribute="bottom" secondItem="dhG-17-iLF" secondAttribute="bottom" id="AjQ-zq-Vs4"/>
                             <constraint firstItem="okq-Bg-Ml7" firstAttribute="centerX" secondItem="gZF-Ro-1TO" secondAttribute="centerX" id="B1m-Kf-gHg"/>
-                            <constraint firstItem="kdV-AX-o5x" firstAttribute="trailing" secondItem="gex-Pd-p4W" secondAttribute="trailing" constant="20" id="FJg-n5-2cw"/>
                             <constraint firstItem="dhG-17-iLF" firstAttribute="top" secondItem="gZF-Ro-1TO" secondAttribute="top" id="GRa-lk-FhL"/>
                             <constraint firstItem="c1n-m1-c6r" firstAttribute="top" secondItem="UFG-sb-232" secondAttribute="bottom" constant="20" id="Igj-9P-auR"/>
+                            <constraint firstItem="kdV-AX-o5x" firstAttribute="trailing" secondItem="gex-Pd-p4W" secondAttribute="trailing" constant="20" id="JIR-4k-h8p"/>
                             <constraint firstItem="dhG-17-iLF" firstAttribute="leading" secondItem="kdV-AX-o5x" secondAttribute="leading" id="JrV-DS-lyj"/>
                             <constraint firstItem="okq-Bg-Ml7" firstAttribute="top" secondItem="Hsh-aq-gzP" secondAttribute="bottom" constant="30" id="QaK-hz-Ocx"/>
                             <constraint firstItem="KKt-xD-za5" firstAttribute="centerX" secondItem="gZF-Ro-1TO" secondAttribute="centerX" id="X26-jK-pMa"/>
@@ -202,10 +207,10 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                             <constraint firstItem="UFG-sb-232" firstAttribute="leading" secondItem="kdV-AX-o5x" secondAttribute="leading" constant="20" id="fRu-NU-DHH"/>
                             <constraint firstItem="KKt-xD-za5" firstAttribute="top" secondItem="gZF-Ro-1TO" secondAttribute="topMargin" constant="20" id="hR5-wS-cuH"/>
                             <constraint firstItem="c1n-m1-c6r" firstAttribute="centerX" secondItem="gZF-Ro-1TO" secondAttribute="centerX" id="jKQ-sr-VSb"/>
+                            <constraint firstItem="gex-Pd-p4W" firstAttribute="top" secondItem="kdV-AX-o5x" secondAttribute="top" constant="15" id="kI9-Lz-32P"/>
                             <constraint firstItem="Hsh-aq-gzP" firstAttribute="top" secondItem="qc7-ZF-52L" secondAttribute="bottom" constant="10" id="nm8-xR-0yt"/>
                             <constraint firstItem="dhG-17-iLF" firstAttribute="trailing" secondItem="kdV-AX-o5x" secondAttribute="trailing" id="npp-c8-86F"/>
                             <constraint firstItem="qc7-ZF-52L" firstAttribute="centerX" secondItem="gZF-Ro-1TO" secondAttribute="centerX" id="qoc-dd-66X"/>
-                            <constraint firstItem="gex-Pd-p4W" firstAttribute="top" secondItem="kdV-AX-o5x" secondAttribute="top" constant="20" id="sS4-c1-i5e"/>
                             <constraint firstItem="qc7-ZF-52L" firstAttribute="top" secondItem="c1n-m1-c6r" secondAttribute="bottom" constant="10" id="wzU-gt-4zc"/>
                         </constraints>
                     </view>
@@ -220,7 +225,7 @@ Please note this is just a digital tip no extra functionality will be unlocked, 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sML-Ky-K6r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="970"/>
+            <point key="canvasLocation" x="876.81159420289862" y="969.64285714285711"/>
         </scene>
         <!--Select League View Controller-->
         <scene sceneID="b3t-og-nXC">
@@ -893,6 +898,7 @@ Remove Photos will remove all the photos from the app, but will not delete the o
     <resources>
         <image name="Background" width="2121" height="3000"/>
         <image name="Buttons" width="27.5" height="50"/>
+        <image name="CancelButton" width="36" height="36"/>
         <image name="ChampButton" width="230" height="40"/>
         <image name="HomePageCount" width="251" height="250"/>
         <image name="LeagueOneButton" width="230" height="40"/>
