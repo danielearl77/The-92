@@ -359,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NLNPC5X4J8;
 				INFOPLIST_FILE = "The 92/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
@@ -380,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NLNPC5X4J8;
 				INFOPLIST_FILE = "The 92/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
