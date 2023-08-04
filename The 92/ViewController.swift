@@ -20,14 +20,14 @@ class ViewController: UIViewController {
      * NEW LIVE VERSION NUMBER FOR THE NEW SEASON
      * Default value is -1 to not trigger new season updates
      */
-        let newSeasonVersionNumber = "3.0"
+        let newSeasonVersionNumber = "3.2"
     /*
-     * Enter new values here AND update Team, Stadium, and Stadium Map Arrays as needed
+     * Enter new values here AND update Team, Stadium, Stadium Map Arrays, and team icons as needed
      * comment out any not needed for this update
      */
-        let promotedTeams = ["Stockport County","Grimsby Town"]
-        let relegatedTeams = ["Scunthorpe Utd","Oldham Athletic"]
-        let changedGroundName = ["Coventry":"Coventry Building Society Arena","Hull City":"KCOM Stadium","Barrow":"The Dunes Hotel Stadium","Sutton Utd":"VBS Community Stadium"]
+        let promotedTeams = ["Notts County","Wrexham"]
+        let relegatedTeams = ["Hartlepool Utd","Rochdale"]
+        //let changedGroundName = ["Team Name":"Stadium Name"]
         //let movedGrounds = ["Team Name":"Team Name"]
     /*
      * END OF NEW SEASON VERSION NUMBER
@@ -380,11 +380,11 @@ class ViewController: UIViewController {
         for r in relegatedTeams {
             _ = updateRelegation(team: r)
         }
-    
+        /*
         for n in changedGroundName {
             _ = updateGroundName(team: n.key, ground: n.value)
         }
-        /*
+        
         for m in movedGrounds {
             _ = updateNewGround(team: m.key)
         }
