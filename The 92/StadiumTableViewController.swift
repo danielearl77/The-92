@@ -54,7 +54,6 @@ class StadiumTableViewController: UITableViewController {
                             "Everton":"Goodison Park",
                             "Exeter City":"St James Park",
                             "Fleetwood":"Highbury Stadium",
-                            "Forest Green Rovers":"The New Lawn",
                             "Fulham":"Craven Cottage",
                             "Gillingham":"Priestfield",
                             "Grimsby Town":"Blundell Park",
@@ -99,7 +98,6 @@ class StadiumTableViewController: UITableViewController {
                             "Sunderland":"Stadium of Light",
                             "Swindon Town":"Country Ground",
                             "Salford City":"Peninsula Stadium",
-                            "Sutton Utd":"VBS Community Stadium",
                             "Stevenage":"Lamex Stadium",
                             "Stockport County":"Edgeley Park",
                             "Tranmere Rovers":"Prenton Park",
@@ -119,16 +117,18 @@ class StadiumTableViewController: UITableViewController {
         "Oldham Athletic":"Boundary Park"
         "Rochdale":"Crown Oil Arena"
         "Hartlepool Utd":"Victoria Park"
+        "Forest Green Rovers":"The New Lawn"
+        "Sutton Utd":"VBS Community Stadium"
      */
     
     // MARK: Team Lists
-    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton","Burnley","Chelsea","Crystal Palace","Everton","Fulham","Liverpool","Luton Town","Man City","Man Utd","Newcastle","Nottingham Forest","Sheffield Utd","Tottenham","West Ham","Wolves"]
+    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton","Burnley","Chelsea","Crystal Palace","Everton","Fulham","Ipswich","Leicester","Liverpool","Luton Town","Man City","Man Utd","Newcastle","Nottingham Forest","Tottenham","West Ham","Wolves"]
     
-    var championshipTeams: [String] = ["Birmingham","Blackburn","Bristol City","Cardiff","Coventry","Huddersfield","Hull City","Ipswich","Leeds Utd","Leicester","Middlesbrough","Millwall","Norwich City","Plymouth","Preston","QPR","Rotherham","Sheffield Wednesday","Southampton","Stoke","Sunderland","Swansea","Watford","West Brom"]
+    var championshipTeams: [String] = ["Blackburn","Bristol City","Cardiff","Coventry","Derby County","Hull City","Leeds Utd","Middlesbrough","Millwall","Norwich City","Plymouth","Portsmouth","Preston","QPR","Sheffield Wednesday","Sheffield Utd","Southampton","Stoke","Sunderland","Swansea","Watford","West Brom"]
     
-    var leagueOneTeams: [String] = ["Barnsley","Blackpool","Bolton","Bristol Rovers","Burton Albion","Cambridge Utd","Carlisle Utd","Charlton Athletic","Cheltenham Town","Derby County","Exeter City","Fleetwood","Leyton Orient","Lincoln City","Northampton Town","Oxford Utd","Peterborough Utd","Port Vale","Portsmouth","Reading","Shrewsbury Town","Stevenage","Wigan","Wycombe Wanderers"]
+    var leagueOneTeams: [String] = ["Barnsley","Birmingham","Blackpool","Bolton","Bristol Rovers","Burton Albion","Cambridge Utd","Carlisle Utd","Charlton Athletic","Cheltenham Town","Exeter City","Fleetwood","Huddersfield","Leyton Orient","Lincoln City","Northampton Town","Oxford Utd","Peterborough Utd","Port Vale","Reading","Rotherham","Shrewsbury Town","Stevenage","Wigan","Wycombe Wanderers"]
     
-    var leagueTwoTeams: [String] = ["AFC Wimbledon","Accrington Stanley","Barrow","Bradford City","Colchester Utd","Crawley Town","Crewe Alexandra","Doncaster Rovers","Forest Green Rovers","Gillingham","Grimsby Town","Harrogate Town","MK Dons","Mansfield Town","Morecambe","Newport County","Notts County","Salford City","Stockport County","Sutton Utd","Swindon Town","Tranmere Rovers","Walsall","Wrexham"]
+    var leagueTwoTeams: [String] = ["AFC Wimbledon","Accrington Stanley","Barrow","Bradford City","Colchester Utd","Crawley Town","Crewe Alexandra","Doncaster Rovers","Gillingham","Grimsby Town","Harrogate Town","MK Dons","Mansfield Town","Morecambe","Newport County","Notts County","Salford City","Stockport County","Swindon Town","Tranmere Rovers","Walsall","Wrexham"]
    
     // MARK: Outlets
     @IBOutlet weak var LeagueCount: UIBarButtonItem!

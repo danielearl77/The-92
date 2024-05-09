@@ -20,13 +20,13 @@ class ViewController: UIViewController {
      * NEW LIVE VERSION NUMBER FOR THE NEW SEASON
      * Default value is -1 to not trigger new season updates
      */
-        let newSeasonVersionNumber = "3.2"
+        let newSeasonVersionNumber = "-1"
     /*
      * Enter new values here AND update Team, Stadium, Stadium Map Arrays, and team icons as needed
      * comment out any not needed for this update
      */
         let promotedTeams = ["Notts County","Wrexham"]
-        let relegatedTeams = ["Hartlepool Utd","Rochdale"]
+        let relegatedTeams = ["Forest Green Rovers","Sutton Utd"]
         //let changedGroundName = ["Team Name":"Stadium Name"]
         //let movedGrounds = ["Team Name":"Team Name"]
     /*
