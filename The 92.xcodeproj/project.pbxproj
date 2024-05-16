@@ -21,6 +21,8 @@
 		1491089E284BB868008DABAE /* IAP Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491089D284BB868008DABAE /* IAP Manager.swift */; };
 		149108A0284BB879008DABAE /* ProductIds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1491089F284BB879008DABAE /* ProductIds.plist */; };
 		14911AEF25B1900B00BC8B56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14911AEE25B1900B00BC8B56 /* CoreGraphics.framework */; };
+		14A42D7B2BED7EBA002605BE /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A42D7A2BED7EBA002605BE /* Teams.swift */; };
+		14A42D7D2BEE1FA2002605BE /* OldVersionTeamNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A42D7C2BEE1FA2002605BE /* OldVersionTeamNames.swift */; };
 		14C956582501204E00E753E8 /* SelectLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C956572501204E00E753E8 /* SelectLeagueViewController.swift */; };
 		14C9565A2501304300E753E8 /* StadiumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C956592501304300E753E8 /* StadiumTableViewController.swift */; };
 		14D225AF284F3A7900AD182E /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D225AE284F3A7900AD182E /* SupportViewController.swift */; };
@@ -48,6 +50,8 @@
 		1491089D284BB868008DABAE /* IAP Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IAP Manager.swift"; sourceTree = "<group>"; };
 		1491089F284BB879008DABAE /* ProductIds.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProductIds.plist; sourceTree = "<group>"; };
 		14911AEE25B1900B00BC8B56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		14A42D7A2BED7EBA002605BE /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		14A42D7C2BEE1FA2002605BE /* OldVersionTeamNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldVersionTeamNames.swift; sourceTree = "<group>"; };
 		14C956572501204E00E753E8 /* SelectLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLeagueViewController.swift; sourceTree = "<group>"; };
 		14C956592501304300E753E8 /* StadiumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumTableViewController.swift; sourceTree = "<group>"; };
 		14D225AE284F3A7900AD182E /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				1487A9FD24FEB19000F91892 /* AppDelegate.swift */,
 				1487A9FF24FEB19000F91892 /* SceneDelegate.swift */,
 				1487AA0124FEB19000F91892 /* ViewController.swift */,
+				14A42D7C2BEE1FA2002605BE /* OldVersionTeamNames.swift */,
 				1487AA0324FEB19000F91892 /* Main.storyboard */,
 				14E6DB9825850EFB005789F6 /* SettingsPrivacyViewController.swift */,
 				1469EF34254C07AC005FE6D2 /* confetti.sks */,
@@ -104,6 +109,7 @@
 				14E8581A25076BF0000583A0 /* StadiumDetailViewController.swift */,
 				140D317E25052C5A003B66E2 /* StadiumTableViewCell.swift */,
 				14C956592501304300E753E8 /* StadiumTableViewController.swift */,
+				14A42D7A2BED7EBA002605BE /* Teams.swift */,
 				14C956572501204E00E753E8 /* SelectLeagueViewController.swift */,
 				1487AA0924FEB19100F91892 /* Assets.xcassets */,
 				1487AA0B24FEB19100F91892 /* LaunchScreen.storyboard */,
@@ -198,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A42D7B2BED7EBA002605BE /* Teams.swift in Sources */,
 				14F74B0625383983007BC294 /* SettingsSettingViewController.swift in Sources */,
 				1487AA0224FEB19000F91892 /* ViewController.swift in Sources */,
 				14D225AF284F3A7900AD182E /* SupportViewController.swift in Sources */,
@@ -212,6 +219,7 @@
 				1491089E284BB868008DABAE /* IAP Manager.swift in Sources */,
 				14C956582501204E00E753E8 /* SelectLeagueViewController.swift in Sources */,
 				14E8581B25076BF0000583A0 /* StadiumDetailViewController.swift in Sources */,
+				14A42D7D2BEE1FA2002605BE /* OldVersionTeamNames.swift in Sources */,
 				14E8581D2509097D000583A0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,7 +376,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 4.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earldr.The-92";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -390,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 4.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earldr.The-92";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

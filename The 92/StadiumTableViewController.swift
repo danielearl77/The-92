@@ -122,13 +122,13 @@ class StadiumTableViewController: UITableViewController {
      */
     
     // MARK: Team Lists
-    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton","Burnley","Chelsea","Crystal Palace","Everton","Fulham","Ipswich","Leicester","Liverpool","Luton Town","Man City","Man Utd","Newcastle","Nottingham Forest","Tottenham","West Ham","Wolves"]
+    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton & Hove Albion","Burnley","Chelsea","Crystal Palace","Everton","Fulham","Ipswich Town","Leicester City","Liverpool","Luton Town","Manchester City","Manchester United","Newcastle United","Nottingham Forest","Tottenham Hotspur","West Ham United","Wolverhampton Wanderers"]
     
-    var championshipTeams: [String] = ["Blackburn","Bristol City","Cardiff","Coventry","Derby County","Hull City","Leeds Utd","Middlesbrough","Millwall","Norwich City","Plymouth","Portsmouth","Preston","QPR","Sheffield Wednesday","Sheffield Utd","Southampton","Stoke","Sunderland","Swansea","Watford","West Brom"]
+    var championshipTeams: [String] = ["Blackburn Rovers","Bristol City","Cardiff City","Coventry City","Derby County","Hull City","Leeds United","Middlesbrough","Millwall","Norwich City","Plymouth Argyle","Portsmouth","Preston North End","Queens Park Rangers","Sheffield Wednesday","Southampton","Stoke City","Sunderland","Swansea City","Watford","West Bromwich Albion"]
     
-    var leagueOneTeams: [String] = ["Barnsley","Birmingham","Blackpool","Bolton","Bristol Rovers","Burton Albion","Cambridge Utd","Carlisle Utd","Charlton Athletic","Cheltenham Town","Exeter City","Fleetwood","Huddersfield","Leyton Orient","Lincoln City","Northampton Town","Oxford Utd","Peterborough Utd","Port Vale","Reading","Rotherham","Shrewsbury Town","Stevenage","Wigan","Wycombe Wanderers"]
+    var leagueOneTeams: [String] = ["Barnsley","Birmingham City","Blackpool","Bolton Wanderers","Bristol Rovers","Burton Albion","Cambridge United","Charlton Athletic","Exeter City","Huddersfield Town","Leyton Orient","Lincoln City","Northampton Town","Oxford United","Peterborough United","Reading","Rotherham United","Shrewsbury Town","Stevenage","Stockport County","Wigan Athletic","Wrexham","Wycombe Wanderers"]
     
-    var leagueTwoTeams: [String] = ["AFC Wimbledon","Accrington Stanley","Barrow","Bradford City","Colchester Utd","Crawley Town","Crewe Alexandra","Doncaster Rovers","Gillingham","Grimsby Town","Harrogate Town","MK Dons","Mansfield Town","Morecambe","Newport County","Notts County","Salford City","Stockport County","Swindon Town","Tranmere Rovers","Walsall","Wrexham"]
+    var leagueTwoTeams: [String] = ["AFC Wimbledon","Accrington Stanley","Barrow","Bradford City","Bromley","Carlisle United","Cheltenham Town","Chesterfield","Colchester United","Crawley Town","Crewe Alexandra","Doncaster Rovers","Fleetwood Town","Gillingham","Grimsby Town","Harrogate Town","MK Dons","Mansfield Town","Morecambe","Newport County","Notts County","Port Vale","Salford City","Swindon Town","Tranmere Rovers","Walsall"]
    
     // MARK: Outlets
     @IBOutlet weak var LeagueCount: UIBarButtonItem!
@@ -340,7 +340,10 @@ class StadiumTableViewController: UITableViewController {
         } else {
             let team = teams[indexPath.row]
             cell.teamName.text = teams[indexPath.row]
-            cell.stadiumName.text = groundNameList[team]
+            //cell.stadiumName.text = groundNameList[team]
+            cell.stadiumName.text = Teams.shared.loadTeamDetails(team: team).stadiumName
+            
+            
             let visitCount = getTeamVisitCount(team: team)
             if visitCount > 0 {
                 cell.teamVisitCount.text = String(visitCount)
@@ -376,8 +379,10 @@ class StadiumTableViewController: UITableViewController {
                 let selected = indexPath.row
                 let stadiumDetailViewController = segue.destination as? StadiumDetailViewController
                 let team = teams[selected]
-                stadiumDetailViewController?.title = groundNameList[team]
-                stadiumDetailViewController?.groundName = groundNameList[team] ?? ""
+//                stadiumDetailViewController?.title = groundNameList[team]
+//                stadiumDetailViewController?.groundName = groundNameList[team] ?? ""
+                stadiumDetailViewController?.title = Teams.shared.loadTeamDetails(team: team).stadiumName
+                stadiumDetailViewController?.groundName = Teams.shared.loadTeamDetails(team: team).stadiumName
                 stadiumDetailViewController?.selectedTeam = team
             }
         }

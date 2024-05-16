@@ -13,25 +13,17 @@ import StoreKit
 
 class ViewController: UIViewController {
     
-    // MARK: NEW SEASON VERSION
+    // MARK: NEW SEASON YEAR VERSION
     /*
-     * THIS IS THE NEW SEASON VERSION CONSTANT AND MUST ONLY BE
-     * CHANGED ON NEW SEASON UPDATE RELEASE. IT MUST MATCH THE
-     * NEW LIVE VERSION NUMBER FOR THE NEW SEASON
-     * Default value is -1 to not trigger new season updates
+     * THIS IS THE NEW SEASON YEAR CONSTANT AND MUST ONLY BE
+     * CHANGED ON NEW SEASON UPDATE RELEASE. IT WILL ALWAYS BE
+     * THE YEAR IN WHICH THE NEW SEASON STARTS
      */
-        let newSeasonVersionNumber = "-1"
-    /*
-     * Enter new values here AND update Team, Stadium, Stadium Map Arrays, and team icons as needed
-     * comment out any not needed for this update
-     */
-        let promotedTeams = ["Notts County","Wrexham"]
-        let relegatedTeams = ["Forest Green Rovers","Sutton Utd"]
-        //let changedGroundName = ["Team Name":"Stadium Name"]
-        //let movedGrounds = ["Team Name":"Team Name"]
+        let newSeasonYear = "2024"
     /*
      * END OF NEW SEASON VERSION NUMBER
      */
+    
     
     // MARK: Outlets
     @IBOutlet weak var TotalVisitCount: UILabel!
@@ -57,6 +49,7 @@ class ViewController: UIViewController {
     let kHasReivewed = "appUserReviewPrompt"
     let kHalfConfetti = "half92Done"
     let kHasTipped = "userHasSupported"
+    let kSeasonYear = "seasonYear"
     
     // MARK: Core Data Functions
     func getHomeStadium() -> Bool {
@@ -273,6 +266,38 @@ class ViewController: UIViewController {
         return true
     }
     
+    func updateOldStyleTeamName(team: String) -> Bool {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return false
+        }
+    
+        let managedContext = appDelegate.persistentContainer.viewContext
+          
+        if appDelegate.coreDataError {
+            coreDataAlerts(msg: appDelegate.coreDataErrorMsg)
+            return false
+        }
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "GroundRecord")
+        fetchRequest.predicate = NSPredicate(format: "team_name == %@", team)
+        
+        do {
+            let loadedTeam = try managedContext.fetch(fetchRequest)
+            if loadedTeam.count > 0 {
+                for i in loadedTeam {
+                    let newTeamName = OldVersionTeamNames.shared.checkTeamName(team: team)
+                    i.setValue(newTeamName, forKey: "team_name")
+                    try managedContext.save()
+                }
+            }
+        } catch let error as NSError {
+            NSLog("Could not fetch. \(error), \(error.userInfo)")
+            return false
+        }
+        
+        return true
+    }
+    
     // MARK: Class Functions   
     func hasSupported() {
         let userDefaults: UserDefaults = UserDefaults.standard
@@ -326,20 +351,38 @@ class ViewController: UIViewController {
             userDefaults.set(1, forKey: kIsFirstLaunch)
             userDefaults.set(version, forKey: kAppVersion)
             userDefaults.set(false, forKey: kHalfConfetti)
+            userDefaults.set(newSeasonYear, forKey: kSeasonYear)
         }
     }
     
     func getSetVersion() {
         let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"]!
         let userDefaults: UserDefaults = UserDefaults.standard
-        let savedVersion = userDefaults.string(forKey: kAppVersion)
-        if savedVersion != version as? String {
-            if version as? String == newSeasonVersionNumber {
-                runNewSeasonUpdates()
-                userDefaults.setValue(version, forKey: kAppVersion)
-            } else {
-                userDefaults.setValue(version, forKey: kAppVersion)
-            }
+        let savedVersion = userDefaults.string(forKey: kAppVersion) ?? "0.0.0"
+        let savedSeasonYear = userDefaults.string(forKey: kSeasonYear) ?? "2000"
+                
+        if savedVersion < "4.0.0" {
+            NSLog("run V4 updates")
+            updateOldTeamNames()
+            updatePromotionRelegation()
+            updateNewStadiums()
+            updateNewStadiumNames()
+            userDefaults.setValue(version, forKey: kAppVersion)
+            userDefaults.set(newSeasonYear, forKey: kSeasonYear)
+        } else if newSeasonYear != savedSeasonYear {
+            NSLog("Run new season updates")
+            updatePromotionRelegation()
+            updateNewStadiums()
+            updateNewStadiumNames()
+            userDefaults.setValue(version, forKey: kAppVersion)
+            userDefaults.set(newSeasonYear, forKey: kSeasonYear)
+        } else if savedVersion != version as? String && savedVersion >= "4.0.0" {
+            NSLog("New minor version")
+            updateNewStadiums()
+            updateNewStadiumNames()
+            userDefaults.setValue(version, forKey: kAppVersion)
+        } else {
+            NSLog("Version has not changed")
         }
     }
     
@@ -370,9 +413,20 @@ class ViewController: UIViewController {
         }
     }
     
-    func runNewSeasonUpdates() {
-        // COMMENT OUT IF NOT NEEDED FOR THIS SEASON UPDATE
-      
+    func updateOldTeamNames() {
+        for team in OldVersionTeamNames.shared.teamsNeedingUpdate {
+            _ = updateOldStyleTeamName(team: team)
+        }
+    }
+    
+    func updatePromotionRelegation() {
+        /**
+         The promoted and relegated teams from and to the 92 should be listed here
+         as well as included (or removed) from the Teams class
+         */
+        let promotedTeams = ["Notts County","Wrexham"]
+        let relegatedTeams = ["Forest Green Rovers","Sutton Utd"]
+        
         for p in promotedTeams {
             _ = updatePromotion(team: p)
         }
@@ -380,16 +434,37 @@ class ViewController: UIViewController {
         for r in relegatedTeams {
             _ = updateRelegation(team: r)
         }
-        /*
-        for n in changedGroundName {
-            _ = updateGroundName(team: n.key, ground: n.value)
-        }
+    }
+    
+    func updateNewStadiums() {
+        /**
+         If an existing 92 club moves ground it should be listed here and the entry in the
+         Teams class updated with the new ground name.  If no club has moved ground
+         then this should be commented out.
+         
+         movedGrounds = ["Team Name","Team Name"]
+         */
+        let movedGrounds = ["Team Name","Team Name"]
         
         for m in movedGrounds {
-            _ = updateNewGround(team: m.key)
+            _ = updateNewGround(team: m)
         }
-        */
-     
+    }
+    
+    func updateNewStadiumNames() {
+        /**
+         If an existing 92 club ground changes name it should be listed here and the entry in the
+         Teams class updated with the new ground name.  If no club has changed ground
+         name then this should be commented out.
+         
+         mochangedGroundNamevedGrounds = ["Team Name","Team Name"]
+         */
+        let changedGroundName = ["Ipswich Town","Queens Park Rangers"]
+        
+        for n in changedGroundName {
+            let teamDetail = Teams.shared.loadTeamDetails(team: n)
+            _ = updateGroundName(team: n, ground: teamDetail.stadiumName)
+        }
     }
     
     // MARK: - View
