@@ -444,11 +444,13 @@ class ViewController: UIViewController {
          
          movedGrounds = ["Team Name","Team Name"]
          */
+        /*
         let movedGrounds = ["Team Name","Team Name"]
         
         for m in movedGrounds {
             _ = updateNewGround(team: m)
         }
+        */
     }
     
     func updateNewStadiumNames() {
@@ -459,12 +461,14 @@ class ViewController: UIViewController {
          
          mochangedGroundNamevedGrounds = ["Team Name","Team Name"]
          */
-        let changedGroundName = ["Ipswich Town","Queens Park Rangers"]
+        /*
+        let changedGroundName = ["Team Name","Team Name"]
         
         for n in changedGroundName {
             let teamDetail = Teams.shared.loadTeamDetails(team: n)
             _ = updateGroundName(team: n, ground: teamDetail.stadiumName)
         }
+        */
     }
     
     // MARK: - View

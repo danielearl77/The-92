@@ -20,111 +20,11 @@ class StadiumTableViewController: UITableViewController {
     var visitCount: [String:Int] = [:]
     var oldGrounds: [NSManagedObject] = []
     var currentGrounds: [NSManagedObject] = []
-    var groundNameList = [  "Accrington Stanley":"Wham Stadium",
-                            "AFC Wimbledon":"Plough Lane",
-                            "Arsenal":"The Emirates",
-                            "Aston Villa":"Villa Park",
-                            "Barnsley":"Oakwell",
-                            "Barrow":"The Dunes Hotel Stadium",
-                            "Birmingham":"St Andrews",
-                            "Blackburn":"Ewood Park",
-                            "Blackpool":"Bloomfield Road",
-                            "Bolton":"University of Bolton Stadium",
-                            "Bournemouth":"Vitality Stadium",
-                            "Bradford City":"Utilita Energy Stadium",
-                            "Brighton":"The Amex",
-                            "Brentford":"Community Stadium",
-                            "Bristol City":"Ashton Gate",
-                            "Bristol Rovers":"Memorial Stadium",
-                            "Burnley":"Turf Moor",
-                            "Burton Albion":"Pirelli Stadium",
-                            "Chelsea":"Stamford Bridge",
-                            "Crystal Palace":"Selhurst Park",
-                            "Cardiff":"Cardiff City Stadium",
-                            "Coventry":"Coventry Building Society Arena",
-                            "Charlton Athletic":"The Valley",
-                            "Crewe Alexandra":"Alexandra Stadium",
-                            "Cambridge Utd":"Abbey Stadium",
-                            "Carlisle Utd":"Brunton Park",
-                            "Cheltenham Town":"Jonny-Rocks Stadium",
-                            "Colchester Utd":"JobServe Stadium",
-                            "Crawley Town":"Peoples Pension Stadium",
-                            "Derby County":"Pride Park",
-                            "Doncaster Rovers":"Keepmoat Stadium",
-                            "Everton":"Goodison Park",
-                            "Exeter City":"St James Park",
-                            "Fleetwood":"Highbury Stadium",
-                            "Fulham":"Craven Cottage",
-                            "Gillingham":"Priestfield",
-                            "Grimsby Town":"Blundell Park",
-                            "Harrogate Town":"CNG Stadium",
-                            "Huddersfield":"John Smiths Stadium",
-                            "Hull City":"KCOM Stadium",
-                            "Ipswich":"Portman Road",
-                            "Leeds Utd":"Elland Road",
-                            "Leicester":"King Power Stadium",
-                            "Lincoln City":"LNER Stadium",
-                            "Liverpool":"Anfield",
-                            "Luton Town":"Kenilworth Road",
-                            "Leyton Orient":"Breyer Group Stadium",
-                            "Man City":"Etihad Stadium",
-                            "Man Utd":"Old Trafford",
-                            "Mansfield Town":"One Call Stadium",
-                            "Morecambe":"Globe Arena",
-                            "Middlesbrough":"Riverside Stadium",
-                            "Millwall":"The New Den",
-                            "MK Dons":"Stadium MK",
-                            "Newcastle":"St James Park",
-                            "Newport County":"Rodney Parade",
-                            "Nottingham Forest":"The City Ground",
-                            "Notts County":"Meadow Lane",
-                            "Northampton Town":"PTS Academy Stadium",
-                            "Norwich City":"Carrow Road",
-                            "Oxford Utd":"Kassam Stadium",
-                            "Preston":"Deepdale",
-                            "Peterborough Utd":"Weston Homes Stadium",
-                            "Plymouth":"Home Park",
-                            "Portsmouth":"Fratton Park",
-                            "Port Vale":"Vale Park",
-                            "QPR":"Kiyan Prince Foundation Stadium",
-                            "Reading":"Madejski Stadium",
-                            "Rotherham":"New York Stadium",
-                            "Sheffield Utd":"Bramall Lane",
-                            "Southampton":"St Marys Stadium",
-                            "Sheffield Wednesday":"Hillsborough",
-                            "Stoke":"bet365 Stadium",
-                            "Swansea":"Liberty Stadium",
-                            "Shrewsbury Town":"Montgomery Waters Meadow",
-                            "Sunderland":"Stadium of Light",
-                            "Swindon Town":"Country Ground",
-                            "Salford City":"Peninsula Stadium",
-                            "Stevenage":"Lamex Stadium",
-                            "Stockport County":"Edgeley Park",
-                            "Tranmere Rovers":"Prenton Park",
-                            "Tottenham":"Tottenham Hotspur Stadium",
-                            "West Brom":"The Hawthorns",
-                            "West Ham":"The London Stadium",
-                            "Wolves":"Molineux",
-                            "Watford":"Vicarage Road",
-                            "Wycombe Wanderers":"Adams Park",
-                            "Wigan":"DW Stadium",
-                            "Walsall":"Banks Stadium",
-                            "Wrexham":"The Racecourse Ground"]
-
-    /*
-        OLD TEAMS
-        "Scunthorpe Utd":"Sands Venue Stadium"
-        "Oldham Athletic":"Boundary Park"
-        "Rochdale":"Crown Oil Arena"
-        "Hartlepool Utd":"Victoria Park"
-        "Forest Green Rovers":"The New Lawn"
-        "Sutton Utd":"VBS Community Stadium"
-     */
-    
+       
     // MARK: Team Lists
-    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton & Hove Albion","Burnley","Chelsea","Crystal Palace","Everton","Fulham","Ipswich Town","Leicester City","Liverpool","Luton Town","Manchester City","Manchester United","Newcastle United","Nottingham Forest","Tottenham Hotspur","West Ham United","Wolverhampton Wanderers"]
+    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton & Hove Albion","Chelsea","Crystal Palace","Everton","Fulham","Ipswich Town","Leicester City","Liverpool","Luton Town","Manchester City","Manchester United","Newcastle United","Nottingham Forest","Tottenham Hotspur","West Ham United","Wolverhampton Wanderers"]
     
-    var championshipTeams: [String] = ["Blackburn Rovers","Bristol City","Cardiff City","Coventry City","Derby County","Hull City","Leeds United","Middlesbrough","Millwall","Norwich City","Plymouth Argyle","Portsmouth","Preston North End","Queens Park Rangers","Sheffield Wednesday","Southampton","Stoke City","Sunderland","Swansea City","Watford","West Bromwich Albion"]
+    var championshipTeams: [String] = ["Blackburn Rovers","Bristol City","Burnley","Cardiff City","Coventry City","Derby County","Hull City","Leeds United","Middlesbrough","Millwall","Norwich City","Plymouth Argyle","Portsmouth","Preston North End","Queens Park Rangers","Sheffield Wednesday","Southampton","Stoke City","Sunderland","Swansea City","Watford","West Bromwich Albion"]
     
     var leagueOneTeams: [String] = ["Barnsley","Birmingham City","Blackpool","Bolton Wanderers","Bristol Rovers","Burton Albion","Cambridge United","Charlton Athletic","Exeter City","Huddersfield Town","Leyton Orient","Lincoln City","Northampton Town","Oxford United","Peterborough United","Reading","Rotherham United","Shrewsbury Town","Stevenage","Stockport County","Wigan Athletic","Wrexham","Wycombe Wanderers"]
     
@@ -165,21 +65,6 @@ class StadiumTableViewController: UITableViewController {
             } else {
                 return false
             }
-            
-            /*
-            let singleTeam = try managedContext.fetch(fetchRequest)
-            let is92 = singleTeam.first?.value(forKeyPath: "is_92") ?? false
-            
-            if is92 as! Bool {
-                if singleTeam.first?.value(forKeyPath: "visit_count") != nil {
-                    return true
-                } else {
-                    return false
-                }
-            } else {
-                return false
-            }
-            */
         } catch let error as NSError {
             NSLog("Could not fetch. \(error), \(error.userInfo)")
             return false
@@ -221,21 +106,6 @@ class StadiumTableViewController: UITableViewController {
             } else {
                 count = 0
             }
-            
-            
-            /*
-            let is92 = ground.first?.value(forKeyPath: "is_92") ?? false
-            
-            if is92 as! Bool {
-                if ground.first?.value(forKeyPath: "visit_count") != nil {
-                    count = ground.first?.value(forKeyPath: "visit_count") as! Int
-                } else {
-                    count = 0
-                }
-            } else {
-                count = 0
-            }
-            */
         } catch let error as NSError {
             NSLog("Could not fetch. \(error), \(error.userInfo)")
             return count
@@ -379,8 +249,6 @@ class StadiumTableViewController: UITableViewController {
                 let selected = indexPath.row
                 let stadiumDetailViewController = segue.destination as? StadiumDetailViewController
                 let team = teams[selected]
-//                stadiumDetailViewController?.title = groundNameList[team]
-//                stadiumDetailViewController?.groundName = groundNameList[team] ?? ""
                 stadiumDetailViewController?.title = Teams.shared.loadTeamDetails(team: team).stadiumName
                 stadiumDetailViewController?.groundName = Teams.shared.loadTeamDetails(team: team).stadiumName
                 stadiumDetailViewController?.selectedTeam = team
