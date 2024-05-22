@@ -516,6 +516,8 @@ class ViewController: UIViewController {
         getSetVersion()
         hasSupported()
         
+        NSLog(NSHomeDirectory())    
+        
         let userDefaults: UserDefaults = UserDefaults.standard
         let halfCount = userDefaults.bool(forKey: kHalfConfetti)
         
