@@ -459,7 +459,7 @@ class ViewController: UIViewController {
          Teams class updated with the new ground name.  If no club has changed ground
          name then this should be commented out.
          
-         mochangedGroundNamevedGrounds = ["Team Name","Team Name"]
+         changedGroundName = ["Team Name","Team Name"]
          */
         /*
         let changedGroundName = ["Team Name","Team Name"]
