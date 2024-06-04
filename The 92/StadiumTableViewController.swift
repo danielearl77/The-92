@@ -210,7 +210,6 @@ class StadiumTableViewController: UITableViewController {
         } else {
             let team = teams[indexPath.row]
             cell.teamName.text = teams[indexPath.row]
-            //cell.stadiumName.text = groundNameList[team]
             cell.stadiumName.text = Teams.shared.loadTeamDetails(team: team).stadiumName
             
             

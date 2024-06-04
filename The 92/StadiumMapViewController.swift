@@ -31,7 +31,6 @@ class StadiumMapViewController: UIViewController, MKMapViewDelegate {
         if res == true {
             mapAnnotationRecord.removeAll()
             for (team, count) in mapTeams {
-                //print(team)
                 let loc = Teams.shared.loadTeamDetails(team: team)
                 let vCount = String(count)
                 let visit = "Visits: " + vCount
