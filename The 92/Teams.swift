@@ -51,12 +51,12 @@ class Teams: NSObject {
             stadiumLon = -1.4686315
         }
         else if team == "Barrow" {
-            stadiumName = "SO Legal Stadium" // *
+            stadiumName = "SO Legal Stadium"
             stadiumLat = 54.12330
             stadiumLon = -3.23494
         }
         else if team == "Birmingham City" {
-            stadiumName = "St. Andrew's @ Knighthead Park" // *
+            stadiumName = "St. Andrew's @ Knighthead Park"
             stadiumLat = 52.474486
             stadiumLon = -1.866873
         }
@@ -71,7 +71,7 @@ class Teams: NSObject {
             stadiumLon = -3.0467969
         }
         else if team == "Bolton Wanderers" {
-            stadiumName = "Toughsheet Community Stadium" // *
+            stadiumName = "Toughsheet Community Stadium"
             stadiumLat = 53.5807096
             stadiumLon = -2.5366891
         }
@@ -81,12 +81,12 @@ class Teams: NSObject {
             stadiumLon = -1.8389888
         }
         else if team == "Bradford City" {
-            stadiumName = "University of Bradford Stadium" // *
+            stadiumName = "University of Bradford Stadium"
             stadiumLat = 53.8035782
             stadiumLon = -1.7594818
         }
         else if team == "Brentford" {
-            stadiumName = "Gtech Community Stadium" // *
+            stadiumName = "Gtech Community Stadium"
             stadiumLat = 51.490821
             stadiumLon = -0.288618
         }
@@ -146,7 +146,7 @@ class Teams: NSObject {
             stadiumLon = -0.1907663
         }
         else if team == "Cheltenham Town" {
-            stadiumName = "The Completely-Suzuki Stadium" // *
+            stadiumName = "The Completely-Suzuki Stadium"
             stadiumLat = 51.9055762
             stadiumLon = -2.0620928
         }
@@ -166,7 +166,7 @@ class Teams: NSObject {
             stadiumLon = -1.497429
         }
         else if team == "Crawley Town" {
-            stadiumName = "Broadfield Stadium" // *
+            stadiumName = "Broadfield Stadium"
             stadiumLat = 51.099568
             stadiumLon = -0.1953945
         }
@@ -186,7 +186,7 @@ class Teams: NSObject {
             stadiumLon = -1.448016
         }
         else if team == "Doncaster Rovers" {
-            stadiumName = "Eco-Power Stadium" // *
+            stadiumName = "Eco-Power Stadium"
             stadiumLat = 53.5097718
             stadiumLon = -1.1129534
         }
@@ -221,7 +221,7 @@ class Teams: NSObject {
             stadiumLon = -0.046709
         }
         else if team == "Harrogate Town" {
-            stadiumName = "The Envirovent Stadium" // *
+            stadiumName = "The Envirovent Stadium"
             stadiumLat = 53.99173
             stadiumLon = -1.51448
         }
@@ -231,7 +231,7 @@ class Teams: NSObject {
             stadiumLon = -1.7731935
         }
         else if team == "Hull City" {
-            stadiumName = "MKM Stadium" // *
+            stadiumName = "MKM Stadium"
             stadiumLat = 53.7457315
             stadiumLon = -0.3680162
         }
@@ -251,7 +251,7 @@ class Teams: NSObject {
             stadiumLon = -1.1414997
         }
         else if team == "Leyton Orient" {
-            stadiumName = "Gaughan Group Stadium" // *
+            stadiumName = "Gaughan Group Stadium"
             stadiumLat = 51.5602116
             stadiumLon = -0.0118855
         }
@@ -281,7 +281,7 @@ class Teams: NSObject {
             stadiumLon = -2.2911967
         }
         else if team == "Mansfield Town" {
-            stadiumName = "Field Mill" // *
+            stadiumName = "Field Mill"
             stadiumLat = 53.1380700
             stadiumLon = -1.2007600
         }
@@ -291,7 +291,7 @@ class Teams: NSObject {
             stadiumLon = -1.2177641
         }
         else if team == "Millwall" {
-            stadiumName = "The Den" // *
+            stadiumName = "The Den"
             stadiumLat = 51.4866709
             stadiumLon = -0.0510526
         }
@@ -301,7 +301,7 @@ class Teams: NSObject {
             stadiumLon = -0.7328938
         }
         else if team == "Morecambe" {
-            stadiumName = "Mazuma Stadium" // *
+            stadiumName = "Mazuma Stadium"
             stadiumLat = 54.061180
             stadiumLon = -2.866935
         }
@@ -316,7 +316,7 @@ class Teams: NSObject {
             stadiumLon = -2.9879900
         }
         else if team == "Northampton Town" {
-            stadiumName = "Sixfields Stadium" // *
+            stadiumName = "Sixfields Stadium"
             stadiumLat = 52.0093942
             stadiumLon = -0.7328938
         }
@@ -366,17 +366,17 @@ class Teams: NSObject {
             stadiumLon = -2.6893447
         }
         else if team == "Queens Park Rangers" {
-            stadiumName = "MATRADE Loftus Road Stadium" // *
+            stadiumName = "MATRADE Loftus Road Stadium"
             stadiumLat = 51.510610
             stadiumLon = -0.230760
         }
         else if team == "Reading" {
-            stadiumName = "Select Car Leasing Stadium" // *
+            stadiumName = "Select Car Leasing Stadium"
             stadiumLat = 51.4223249
             stadiumLon = -0.9834968
         }
         else if team == "Rotherham United" {
-            stadiumName = "AESSEAL New York Stadium" // *
+            stadiumName = "AESSEAL New York Stadium"
             stadiumLat = 53.4296308
             stadiumLon = -1.3611662
         }
@@ -385,7 +385,7 @@ class Teams: NSObject {
             stadiumLat = 53.51363
             stadiumLon = -2.27674
         }
-        else if team == "Sheffield Unitied" {
+        else if team == "Sheffield United" {
             stadiumName = "Bramall Lane"
             stadiumLat = 53.3698603
             stadiumLon = -1.4705122
@@ -396,7 +396,7 @@ class Teams: NSObject {
             stadiumLon = -1.5021879
         }
         else if team == "Shrewsbury Town" {
-            stadiumName = "Croud Meadow" // *
+            stadiumName = "Croud Meadow"
             stadiumLat = 52.6884899
             stadiumLon = -2.7484126
         }
@@ -426,7 +426,7 @@ class Teams: NSObject {
             stadiumLon = -1.3874242
         }
         else if team == "Swansea City" {
-            stadiumName = "Swansea.com Stadium" // *
+            stadiumName = "Swansea.com Stadium"
             stadiumLat = 51.6421561
             stadiumLon = -3.9351185
         }
@@ -446,7 +446,7 @@ class Teams: NSObject {
             stadiumLon = -3.035836
         }
         else if team == "Walsall" {
-            stadiumName = "Poundland Bescot Stadium" // *
+            stadiumName = "Poundland Bescot Stadium"
             stadiumLat = 52.5655187
             stadiumLon = -1.991164
         }
@@ -466,7 +466,7 @@ class Teams: NSObject {
             stadiumLon = -0.01649
         }
         else if team == "Wigan Athletic" {
-            stadiumName = "The Brick Community Stadium" // *
+            stadiumName = "The Brick Community Stadium"
             stadiumLat = 53.5471948
             stadiumLon = -2.6545159
         }
@@ -476,7 +476,7 @@ class Teams: NSObject {
             stadiumLon = -2.130635
         }
         else if team == "Wrexham" {
-            stadiumName = "STōK Cae Ras" // *
+            stadiumName = "STōK Cae Ras"
             stadiumLat = 53.05195
             stadiumLon = -3.00362
         }
