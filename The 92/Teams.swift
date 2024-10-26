@@ -338,7 +338,7 @@ class Teams: NSObject {
         else if team == "Oxford United" {
             stadiumName = "Kassam Stadium"
             stadiumLat = 51.7175536
-            stadiumLon = 1.2112956
+            stadiumLon = -1.2112956
         }
         else if team == "Peterborough United" {
             stadiumName = "Weston Homes Stadium"

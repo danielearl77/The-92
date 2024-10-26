@@ -462,13 +462,14 @@ class ViewController: UIViewController {
          changedGroundName = ["Team Name","Team Name"]
          */
         
+        /*
         let changedGroundName = ["Barrow","Birmingham City","Bolton Wanderers","Bradford City","Brentford","Cheltenham Town","Crawley Town","Doncaster Rovers","Harrogate Town","Hull City","Leyton Orient","Mansfield Town","Millwall","Morecambe","Northampton Town","Queens Park Rangers","Reading","Rotherham United","Shrewsbury Town","Swansea City","Walsall","Wigan Athletic","Wrexham"]
         
         for n in changedGroundName {
             let teamDetail = Teams.shared.loadTeamDetails(team: n)
             _ = updateGroundName(team: n, ground: teamDetail.stadiumName)
         }
-
+         */
     }
     
     // MARK: - View
