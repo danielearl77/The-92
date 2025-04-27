@@ -22,13 +22,13 @@ class StadiumTableViewController: UITableViewController {
     var currentGrounds: [NSManagedObject] = []
        
     // MARK: Team Lists
-    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton & Hove Albion","Chelsea","Crystal Palace","Everton","Fulham","Ipswich Town","Leicester City","Liverpool","Manchester City","Manchester United","Newcastle United","Nottingham Forest","Southampton","Tottenham Hotspur","West Ham United","Wolverhampton Wanderers"]
+    var premierLeagueTeams = ["Arsenal","Aston Villa","Bournemouth","Brentford","Brighton & Hove Albion","Burnley","Chelsea","Crystal Palace","Everton","Fulham","Leeds United","Liverpool","Manchester City","Manchester United","Newcastle United","Nottingham Forest","Tottenham Hotspur","West Ham United","Wolverhampton Wanderers"]
     
-    var championshipTeams: [String] = ["Blackburn Rovers","Bristol City","Burnley","Cardiff City","Coventry City","Derby County","Hull City","Leeds United","Luton Town","Middlesbrough","Millwall","Norwich City","Oxford United","Plymouth Argyle","Portsmouth","Preston North End","Queens Park Rangers","Sheffield United","Sheffield Wednesday","Stoke City","Sunderland","Swansea City","Watford","West Bromwich Albion"]
+    var championshipTeams: [String] = ["Birmingham City","Blackburn Rovers","Bristol City","Coventry City","Derby County","Hull City","Ipswich Town","Leicester City","Luton Town","Middlesbrough","Millwall","Norwich City","Oxford United","Plymouth Argyle","Portsmouth","Preston North End","Queens Park Rangers","Sheffield United","Sheffield Wednesday","Southampton","Stoke City","Sunderland","Swansea City","Watford","West Bromwich Albion","Wrexham"]
     
-    var leagueOneTeams: [String] = ["Barnsley","Birmingham City","Blackpool","Bolton Wanderers","Bristol Rovers","Burton Albion","Cambridge United","Charlton Athletic","Crawley Town","Exeter City","Huddersfield Town","Leyton Orient","Lincoln City","Mansfield Town","Northampton Town","Peterborough United","Reading","Rotherham United","Shrewsbury Town","Stevenage","Stockport County","Wigan Athletic","Wrexham","Wycombe Wanderers"]
+    var leagueOneTeams: [String] = ["Barnsley","Blackpool","Bolton Wanderers","Bristol Rovers","Burton Albion","Cardiff City","Charlton Athletic","Crawley Town","Doncaster Rovers","Exeter City","Huddersfield Town","Leyton Orient","Lincoln City","Mansfield Town","Northampton Town","Peterborough United","Port Vale","Reading","Rotherham United","Stevenage","Stockport County","Wigan Athletic","Wycombe Wanderers"]
     
-    var leagueTwoTeams: [String] = ["AFC Wimbledon","Accrington Stanley","Barrow","Bradford City","Bromley","Carlisle United","Cheltenham Town","Chesterfield","Colchester United","Crewe Alexandra","Doncaster Rovers","Fleetwood Town","Gillingham","Grimsby Town","Harrogate Town","MK Dons","Morecambe","Newport County","Notts County","Port Vale","Salford City","Swindon Town","Tranmere Rovers","Walsall"]
+    var leagueTwoTeams: [String] = ["AFC Wimbledon","Accrington Stanley","Barnet","Barrow","Bradford City","Bromley","Cambridge United","Cheltenham Town","Chesterfield","Colchester United","Crewe Alexandra","Fleetwood Town","Gillingham","Grimsby Town","Harrogate Town","MK Dons","Newport County","Notts County","Salford City","Shrewsbury Town","Swindon Town","Tranmere Rovers","Walsall"]
    
     // MARK: Outlets
     @IBOutlet weak var LeagueCount: UIBarButtonItem!

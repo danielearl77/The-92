@@ -45,6 +45,11 @@ class Teams: NSObject {
             stadiumLat = 52.5088714
             stadiumLon = -1.8848723
         }
+        else if team == "Barnet" {
+            stadiumName = "The Hive London"
+            stadiumLat = 51.64584
+            stadiumLon = -0.19298
+        }
         else if team == "Barnsley" {
             stadiumName = "Oakwell"
             stadiumLat = 53.5522662
@@ -129,11 +134,6 @@ class Teams: NSObject {
             stadiumName = "Cardiff City Stadium"
             stadiumLat = 51.472830
             stadiumLon = -3.203030
-        }
-        else if team == "Carlisle United" {
-            stadiumName = "Brunton Park"
-            stadiumLat = 54.8958163
-            stadiumLon = -2.9144752
         }
         else if team == "Charlton Athletic" {
             stadiumName = "The Valley"
@@ -299,11 +299,6 @@ class Teams: NSObject {
             stadiumName = "Stadium MK"
             stadiumLat = 52.0093942
             stadiumLon = -0.7328938
-        }
-        else if team == "Morecambe" {
-            stadiumName = "Mazuma Stadium"
-            stadiumLat = 54.061180
-            stadiumLon = -2.866935
         }
         else if team == "Newcastle United" {
             stadiumName = "St James Park"
@@ -499,5 +494,19 @@ class Teams: NSObject {
       "Rochdale":[53.6191217,-2.1800118],"Rochdale":"Crown Oil Arena"
       "Forest Green Rovers":[51.699104,-2.237933],"Forest Green Rovers":"The New Lawn"
       "Sutton Utd":[51.36759,-0.20429],"Sutton Utd":"VBS Community Stadium"
+     
+     else if team == "Morecambe" {
+         stadiumName = "Mazuma Stadium"
+         stadiumLat = 54.061180
+         stadiumLon = -2.866935
+     }
+     else if team == "Carlisle United" {
+         stadiumName = "Brunton Park"
+         stadiumLat = 54.8958163
+         stadiumLon = -2.9144752
+     }
+     
    */
+    
+    
 }

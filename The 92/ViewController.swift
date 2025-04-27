@@ -19,7 +19,7 @@ class ViewController: UIViewController {
      * CHANGED ON NEW SEASON UPDATE RELEASE. IT WILL ALWAYS BE
      * THE YEAR IN WHICH THE NEW SEASON STARTS
      */
-        let newSeasonYear = "2024"
+        let newSeasonYear = "2025"
     /*
      * END OF NEW SEASON VERSION NUMBER
      */
@@ -424,8 +424,8 @@ class ViewController: UIViewController {
          The promoted and relegated teams from and to the 92 should be listed here
          as well as included (or removed) from the Teams class
          */
-        let promotedTeams = ["Bromley","Chesterfield"]
-        let relegatedTeams = ["Forest Green Rovers","Sutton Utd"]
+        let promotedTeams = ["Barnet",""]
+        let relegatedTeams = ["Carlisle United","Morecambe"]
         
         for p in promotedTeams {
             _ = updatePromotion(team: p)
