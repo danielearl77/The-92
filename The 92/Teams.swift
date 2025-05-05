@@ -47,8 +47,8 @@ class Teams: NSObject {
         }
         else if team == "Barnet" {
             stadiumName = "The Hive London"
-            stadiumLat = 51.64584
-            stadiumLon = -0.19298
+            stadiumLat = 51.602621
+            stadiumLon = -0.291776
         }
         else if team == "Barnsley" {
             stadiumName = "Oakwell"
