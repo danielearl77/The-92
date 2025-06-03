@@ -444,13 +444,13 @@ class ViewController: UIViewController {
          
          movedGrounds = ["Team Name","Team Name"]
          */
-        /*
-        let movedGrounds = ["Team Name","Team Name"]
+        
+        let movedGrounds = ["Everton"]
         
         for m in movedGrounds {
             _ = updateNewGround(team: m)
         }
-        */
+        
     }
     
     func updateNewStadiumNames() {

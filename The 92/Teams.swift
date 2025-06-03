@@ -191,9 +191,9 @@ class Teams: NSObject {
             stadiumLon = -1.1129534
         }
         else if team == "Everton" {
-            stadiumName = "Goodison Park"
-            stadiumLat = 53.4391966
-            stadiumLon = -2.9670169
+            stadiumName = "Hill Dickinson Stadium"
+            stadiumLat = 53.425003
+            stadiumLon = -3.002717
         }
         else if team == "Exeter City" {
             stadiumName = "St James Park"
@@ -329,6 +329,11 @@ class Teams: NSObject {
             stadiumName = "Meadow Lane"
             stadiumLat = 52.94224
             stadiumLon = -1.13610
+        }
+        else if team == "Oldham Athletic" {
+            stadiumName = "Boundary Park"
+            stadiumLat = 53.5543382
+            stadiumLon = -2.1280832
         }
         else if team == "Oxford United" {
             stadiumName = "Kassam Stadium"
@@ -488,7 +493,6 @@ class Teams: NSObject {
     }
     
     /*  OLD GROUNDS
-      "Oldham Athletic":[53.5543382,-2.1280832],"Oldham Athletic":"Boundary Park"
       "Scunthorpe Utd":[53.5872359,-0.6948787],"Scunthorpe Utd":"Sands Venue Stadium"
       "Hartlepool Utd":[54.68957,-1.21360],"Hartlepool Utd":"Victoria Park"
       "Rochdale":[53.6191217,-2.1800118],"Rochdale":"Crown Oil Arena"
