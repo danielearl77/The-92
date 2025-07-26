@@ -146,7 +146,7 @@ class Teams: NSObject {
             stadiumLon = -0.1907663
         }
         else if team == "Cheltenham Town" {
-            stadiumName = "The Completely-Suzuki Stadium"
+            stadiumName = "EV Charger Points Stadium"
             stadiumLat = 51.9055762
             stadiumLon = -2.0620928
         }

@@ -424,7 +424,7 @@ class ViewController: UIViewController {
          The promoted and relegated teams from and to the 92 should be listed here
          as well as included (or removed) from the Teams class
          */
-        let promotedTeams = ["Barnet",""]
+        let promotedTeams = ["Barnet","Oldham Athletic"]
         let relegatedTeams = ["Carlisle United","Morecambe"]
         
         for p in promotedTeams {
@@ -450,7 +450,6 @@ class ViewController: UIViewController {
         for m in movedGrounds {
             _ = updateNewGround(team: m)
         }
-        
     }
     
     func updateNewStadiumNames() {
@@ -462,14 +461,12 @@ class ViewController: UIViewController {
          changedGroundName = ["Team Name","Team Name"]
          */
         
-        /*
-        let changedGroundName = ["Barrow","Birmingham City","Bolton Wanderers","Bradford City","Brentford","Cheltenham Town","Crawley Town","Doncaster Rovers","Harrogate Town","Hull City","Leyton Orient","Mansfield Town","Millwall","Morecambe","Northampton Town","Queens Park Rangers","Reading","Rotherham United","Shrewsbury Town","Swansea City","Walsall","Wigan Athletic","Wrexham"]
+        let changedGroundName = ["Cheltenham Town"]
         
         for n in changedGroundName {
             let teamDetail = Teams.shared.loadTeamDetails(team: n)
             _ = updateGroundName(team: n, ground: teamDetail.stadiumName)
         }
-         */
     }
     
     // MARK: - View
