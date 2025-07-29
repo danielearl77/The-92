@@ -45,6 +45,11 @@ class Teams: NSObject {
             stadiumLat = 52.5088714
             stadiumLon = -1.8848723
         }
+        else if team == "Barnet" {
+            stadiumName = "The Hive London"
+            stadiumLat = 51.602621
+            stadiumLon = -0.291776
+        }
         else if team == "Barnsley" {
             stadiumName = "Oakwell"
             stadiumLat = 53.5522662
@@ -130,11 +135,6 @@ class Teams: NSObject {
             stadiumLat = 51.472830
             stadiumLon = -3.203030
         }
-        else if team == "Carlisle United" {
-            stadiumName = "Brunton Park"
-            stadiumLat = 54.8958163
-            stadiumLon = -2.9144752
-        }
         else if team == "Charlton Athletic" {
             stadiumName = "The Valley"
             stadiumLat = 51.486687
@@ -146,7 +146,7 @@ class Teams: NSObject {
             stadiumLon = -0.1907663
         }
         else if team == "Cheltenham Town" {
-            stadiumName = "The Completely-Suzuki Stadium"
+            stadiumName = "EV Charger Points Stadium"
             stadiumLat = 51.9055762
             stadiumLon = -2.0620928
         }
@@ -191,9 +191,9 @@ class Teams: NSObject {
             stadiumLon = -1.1129534
         }
         else if team == "Everton" {
-            stadiumName = "Goodison Park"
-            stadiumLat = 53.4391966
-            stadiumLon = -2.9670169
+            stadiumName = "Hill Dickinson Stadium"
+            stadiumLat = 53.425003
+            stadiumLon = -3.002717
         }
         else if team == "Exeter City" {
             stadiumName = "St James Park"
@@ -300,11 +300,6 @@ class Teams: NSObject {
             stadiumLat = 52.0093942
             stadiumLon = -0.7328938
         }
-        else if team == "Morecambe" {
-            stadiumName = "Mazuma Stadium"
-            stadiumLat = 54.061180
-            stadiumLon = -2.866935
-        }
         else if team == "Newcastle United" {
             stadiumName = "St James Park"
             stadiumLat = 54.9752008
@@ -334,6 +329,11 @@ class Teams: NSObject {
             stadiumName = "Meadow Lane"
             stadiumLat = 52.94224
             stadiumLon = -1.13610
+        }
+        else if team == "Oldham Athletic" {
+            stadiumName = "Boundary Park"
+            stadiumLat = 53.5543382
+            stadiumLon = -2.1280832
         }
         else if team == "Oxford United" {
             stadiumName = "Kassam Stadium"
@@ -493,11 +493,24 @@ class Teams: NSObject {
     }
     
     /*  OLD GROUNDS
-      "Oldham Athletic":[53.5543382,-2.1280832],"Oldham Athletic":"Boundary Park"
       "Scunthorpe Utd":[53.5872359,-0.6948787],"Scunthorpe Utd":"Sands Venue Stadium"
       "Hartlepool Utd":[54.68957,-1.21360],"Hartlepool Utd":"Victoria Park"
       "Rochdale":[53.6191217,-2.1800118],"Rochdale":"Crown Oil Arena"
       "Forest Green Rovers":[51.699104,-2.237933],"Forest Green Rovers":"The New Lawn"
       "Sutton Utd":[51.36759,-0.20429],"Sutton Utd":"VBS Community Stadium"
+     
+     else if team == "Morecambe" {
+         stadiumName = "Mazuma Stadium"
+         stadiumLat = 54.061180
+         stadiumLon = -2.866935
+     }
+     else if team == "Carlisle United" {
+         stadiumName = "Brunton Park"
+         stadiumLat = 54.8958163
+         stadiumLon = -2.9144752
+     }
+     
    */
+    
+    
 }

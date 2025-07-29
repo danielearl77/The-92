@@ -19,7 +19,7 @@ class ViewController: UIViewController {
      * CHANGED ON NEW SEASON UPDATE RELEASE. IT WILL ALWAYS BE
      * THE YEAR IN WHICH THE NEW SEASON STARTS
      */
-        let newSeasonYear = "2024"
+        let newSeasonYear = "2025"
     /*
      * END OF NEW SEASON VERSION NUMBER
      */
@@ -424,8 +424,8 @@ class ViewController: UIViewController {
          The promoted and relegated teams from and to the 92 should be listed here
          as well as included (or removed) from the Teams class
          */
-        let promotedTeams = ["Bromley","Chesterfield"]
-        let relegatedTeams = ["Forest Green Rovers","Sutton Utd"]
+        let promotedTeams = ["Barnet","Oldham Athletic"]
+        let relegatedTeams = ["Carlisle United","Morecambe"]
         
         for p in promotedTeams {
             _ = updatePromotion(team: p)
@@ -444,13 +444,12 @@ class ViewController: UIViewController {
          
          movedGrounds = ["Team Name","Team Name"]
          */
-        /*
-        let movedGrounds = ["Team Name","Team Name"]
+        
+        let movedGrounds = ["Everton"]
         
         for m in movedGrounds {
             _ = updateNewGround(team: m)
         }
-        */
     }
     
     func updateNewStadiumNames() {
@@ -462,14 +461,12 @@ class ViewController: UIViewController {
          changedGroundName = ["Team Name","Team Name"]
          */
         
-        /*
-        let changedGroundName = ["Barrow","Birmingham City","Bolton Wanderers","Bradford City","Brentford","Cheltenham Town","Crawley Town","Doncaster Rovers","Harrogate Town","Hull City","Leyton Orient","Mansfield Town","Millwall","Morecambe","Northampton Town","Queens Park Rangers","Reading","Rotherham United","Shrewsbury Town","Swansea City","Walsall","Wigan Athletic","Wrexham"]
+        let changedGroundName = ["Cheltenham Town"]
         
         for n in changedGroundName {
             let teamDetail = Teams.shared.loadTeamDetails(team: n)
             _ = updateGroundName(team: n, ground: teamDetail.stadiumName)
         }
-         */
     }
     
     // MARK: - View
