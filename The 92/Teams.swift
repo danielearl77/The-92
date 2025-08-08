@@ -312,8 +312,8 @@ class Teams: NSObject {
         }
         else if team == "Northampton Town" {
             stadiumName = "Sixfields Stadium"
-            stadiumLat = 52.0093942
-            stadiumLon = -0.7328938
+            stadiumLat = 52.235164
+            stadiumLon = -0.933492
         }
         else if team == "Norwich City" {
             stadiumName = "Carrow Road"
